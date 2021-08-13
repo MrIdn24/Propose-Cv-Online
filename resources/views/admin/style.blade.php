@@ -400,7 +400,7 @@
 }
 
 .breadcrumb .bulet2 i {
-    padding: 15px 6px;
+    padding: 15px 7px;
 }
 
 .breadcrumb .bulet3 {

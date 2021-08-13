@@ -3,11 +3,14 @@
     <section id="input-one">
         <div class="breadcrumb container w-75 justify-content-evenly">
             <div class="row">
-                <div class="col-md-4 bulet1 me-5" style="opacity: 50%;"><i class="fas fa-user text-white text-center"></i></div>
-                <div class="col-md-4 bulet2 me-5"><i
+                <div class="col-md-3 bulet1 me-4"><i class="fas fa-user text-white text-center"></i></div>
+                <div class="col-md-3 bulet2 me-4" style="opacity: 50%;"><i
                         class="fas fa-file-alt text-white text-center"></i>
                 </div>
-                <div class="col-md-4 bulet3 me-5" style="opacity: 50%;"><i
+                <div class="col-md-3 bulet3 me-4" style="opacity: 50%;"><i
+                        class="fas fa-pen   text-white text-center"></i>
+                </div>
+                <div class="col-md-3 bulet3 me-4 " style="opacity: 50%;"><i
                         class="fas fa-check   text-white text-center"></i>
                 </div>
             </div>
