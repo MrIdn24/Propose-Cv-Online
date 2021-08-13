@@ -80,7 +80,7 @@
     <div class="container">
         <div class="row aboutme-content pt-5 pb-5 ">
             <div class="col-md-6 mb-3 mb-md-0 text-center">
-                <img src="{{asset('images/confused girl.png')}}" alt="" class="images">
+                <img src="{{asset('images/aleks.png')}}" alt="" class="images">
             </div>
             <div class="col-md-6">
                 <h1>Apa Itu ProposeCV</h1>
