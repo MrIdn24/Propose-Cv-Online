@@ -138,7 +138,7 @@
     }
 
     #aboutme .images {
-        max-width: 360px;
+        max-width: 450px;
     }
 
     #aboutme h1 {
