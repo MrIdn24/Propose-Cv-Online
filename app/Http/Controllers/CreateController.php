@@ -57,14 +57,34 @@ class CreateController extends Controller
         //     'negara' => 'required',
         // ]);
 
-        Datadiri::create($request->all());
+        $nm = $request->foto;
+        $namafile = time() . rand(100, 999) . "." . $nm->getClientOriginalExtension();
+
+        $dtUpload = new Datadiri;
+        $dtUpload->foto = $namafile;
+        $dtUpload->nama_depan = $request->nama_depan;
+        $dtUpload->nama_belakang = $request->nama_belakang;
+        $dtUpload->tempat_lahir = $request->tempat_lahir;
+        $dtUpload->tanggal_lahir = $request->tanggal_lahir;
+        $dtUpload->jenis_kelamin = $request->jenis_kelamin;
+        $dtUpload->agama = $request->agama;
+        $dtUpload->status_perkawinan = $request->status_perkawinan;
+        $dtUpload->email = $request->email;
+        $dtUpload->no_telp = $request->no_telp;
+        $dtUpload->alamat = $request->alamat;
+        $dtUpload->kota = $request->kota;
+        $dtUpload->negara = $request->negara;
+
+        $nm->move(public_path() . '/images', $namafile);
+        $dtUpload->save();
+
         return redirect()->route('pengalaman');
     }
     public function storepengalam(Request $request)
     {
         // dd($request);
         $request->validate([
-            // 'deksripsi' => 'required',
+            'deksripsi' => 'required',
             'nama_instansi' => 'required',
             'kota_instansi' => 'required',
             'mulai_belajar' => 'required',
@@ -80,6 +100,27 @@ class CreateController extends Controller
             'selesai_kerja' => 'required',
         ]);
 
+        // $dtUpload = new Pengalaman;
+        // $dtUpload->deksripsi = $request->deksripsi;
+        // $dtUpload->nama_instansi = $request->nama_instansi;
+        // $dtUpload->kota_instansi = $request->kota_instansi;
+        // $dtUpload->mulai_belajar = $request->mulai_belajar;
+        // $dtUpload->selesai_belajar = $request->selesai_belajar;
+        // $dtUpload->nama_org = $request->nama_org;
+        // $dtUpload->mulai_org = $request->mulai_org;
+        // $dtUpload->selesai_org = $request->selesai_org;
+        // $dtUpload->prestasi = $request->prestasi;
+        // $dtUpload->bulantahun = $request->bulantahun;
+        // $dtUpload->jabatan = $request->jabatan;
+        // $dtUpload->perusahaan = $request->perusahaan;
+        // $dtUpload->mulai_kerja = $request->mulai_kerja;
+        // $dtUpload->selesai_kerja = $request->selesai_kerja;
+        // $id = Datadiri::all();
+        // foreach ($id as $i) {
+        //     $dtUpload->id_datadiris = $i->id;
+        // }
+
+        // $dtUpload->save();
         Pengalaman::create($request->all());
         return redirect()->route('checkout');
     }
@@ -130,8 +171,10 @@ class CreateController extends Controller
 
     public function template()
     {
-        $data = Datadiri::all();
+        $data1 = Datadiri::all();
+        $data2 = Pengalaman::all();
+
         // dd($data);
-        return view('template.templateflat', compact('data'));
+        return view('template.templateflat', compact('data1', 'data2'));
     }
 }

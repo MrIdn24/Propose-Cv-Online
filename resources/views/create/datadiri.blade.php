@@ -19,7 +19,7 @@
         <div class="container ">
             <div class="card shadow mb-4">
                 <div class="container">
-                    <form action="{{ route('create.storedata') }}" method="POST">
+                    <form action="{{ route('create.storedata') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <h4 class="border-bottom border-1 border-dark pb-1">Data Diri</h4>
                         <div class="row mt-2 mt-md-4">

@@ -15,6 +15,7 @@ class CreatePengalamenTable extends Migration
     {
         Schema::create('pengalaman', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('id_datadiris');
             $table->text('deksripsi');
             $table->string('nama_instansi');
             $table->string('kota_instansi');

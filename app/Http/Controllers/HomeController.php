@@ -20,6 +20,6 @@ class HomeController extends Controller
     }
     public function checkout()
     {
-        return view('create.checkout');
+        return view('create.chtemplate');
     }
 }

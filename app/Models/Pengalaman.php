@@ -25,4 +25,9 @@ class Pengalaman extends Model
         'mulai_kerja',
         'selesai_kerja',
     ];
+
+    public function datadiris()
+    {
+        return $this->belongsTo(Pengalaman::class);
+    }
 }

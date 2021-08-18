@@ -24,4 +24,8 @@ class Datadiri extends Model
         'kota',
         'negara',
     ];
+    public function pengalaman()
+    {
+        return $this->hasOne(Datadiri::class);
+    }
 }

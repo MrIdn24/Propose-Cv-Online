@@ -1,4 +1,4 @@
-{{-- {{ dd($data) }} --}}
+{{-- {{ dd($data2) }} --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -288,29 +288,31 @@
                         <ul>
                             <li>
                                 Nama : <br>
-                                @foreach ($data as $dat)
-                                <span style="font-weight: normal;">{{ $dat->nama_depan }}{{$dat->nama_belakang}}</span>
+                                @foreach ($data1 as $dat)
                                 @endforeach
+                                @foreach ($data2 as $dats)
+                                @endforeach
+                                <span style="font-weight: normal;">{{ $dat->nama_depan . ' ' . $dat->nama_belakang}}</span>
                             </li>
                             <li>
                                 Tempat/Tanggal Lahir : <br>
-                                <span style="font-weight: normal;">Cilacap, 24-10-2003</span>
+                                <span style="font-weight: normal;">{{ $dat->tempat_lahir . ', ' . date("d m Y", strtotime($dat->tanggal_lahir)) }}</span>
                             </li>
                             <li>
                                 Jenis Kelamin : <br>
-                                <span style="font-weight: normal;">Laki-laki</span>
+                                <span style="font-weight: normal;">{{ $dat->jenis_kelamin }}</span>
                             </li>
                             <li>
                                 Alamat : <br>
-                                <span style="font-weight: normal;">Jl.Nurul Iman 1 No.199 Rt 05/010, Depok</span>
+                                <span style="font-weight: normal;">{{ $dat->alamat }}</span>
                             </li>
                             <li>
                                 No Telp/Hp : <br>
-                                <span style="font-weight: normal;">0895xxxxxx</span>
+                                <span style="font-weight: normal;">{{ $dat->no_telp }}</span>
                             </li>
                             <li>
                                 Email : <br>
-                                <span style="font-weight: normal;">faturapik67@gmail.com</span>
+                                <span style="font-weight: normal;">{{ $dat->email }}</span>
                             </li>
                         </ul>
                     </div>
@@ -360,22 +362,19 @@
         <div class="content">
             <div class="nama">
                 Daftar Riwayat Hidup <br>
-                <span>Syaifudin Ilham</span>
+                <span>{{ $dat->nama_depan . ' ' . $dat->nama_belakang}}</span>
             </div>
-            <div class="bulet">
+            <div class="bulet" style="background-color: white; z-index: 9999;">
                 <span>1</span>
                 <hr>
             </div>
             <div class="tentang-saya">
                 <span>tentang saya</span>
                 <div class="isi-tentang">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque cumque ipsa aliquid ratione dolores
-                    ex assumenda impedit, porro numquam quo delectus dicta vel reiciendis facere suscipit autem deleniti
-                    recusandae voluptatibus voluptas maiores iure animi ipsum voluptate! Ut fugit labore, earum qui
-                    exercitationem, distinctio dicta aliquid dolorum non consectetur libero ipsum?
+                    {{ $dats->deksripsi }}
                 </div>
             </div>
-            <div class="bulet" style="margin-top: 75px;">
+            <div class="bulet" style="margin-top: 75px; background-color: white; z-index: 9999;">
                 <span>2</span>
                 <hr>
             </div>
@@ -404,7 +403,7 @@
                     </table>
                 </div>
             </div>
-            <div class="bulet" style="margin-top: 70px;">
+            <div class="bulet" style="margin-top: 70px; background-color: white; z-index: 9999;">
                 <span>3</span>
             </div>
             <div class="riwayat">
@@ -427,6 +426,7 @@
                             <td>2022 - 2024</td>
                         </tr>
                     </table>
+
                 </div>
             </div>
         </div>
