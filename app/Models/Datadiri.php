@@ -16,13 +16,13 @@ class Datadiri extends Model
         'tempat_lahir',
         'tanggal_lahir',
         'jenis_kelamin',
-        'agama',
+        // 'agama',
         'status_perkawinan',
         'email',
         'no_telp',
         'alamat',
-        'kota',
-        'negara',
+        // 'kota',
+        // 'negara',
     ];
     public function pengalaman()
     {

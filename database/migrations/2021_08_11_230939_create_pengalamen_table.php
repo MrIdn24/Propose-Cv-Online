@@ -15,17 +15,19 @@ class CreatePengalamenTable extends Migration
     {
         Schema::create('pengalaman', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_datadiris');
+            // $table->bigInteger('id_datadiris');
             $table->text('deksripsi');
             $table->string('nama_instansi');
             $table->string('kota_instansi');
             $table->date('mulai_belajar');
             $table->date('selesai_belajar');
-            $table->string('nama_org');
-            $table->date('mulai_org');
-            $table->date('selesai_org');
-            $table->string('prestasi');
-            $table->date('bulantahun');
+            $table->string('hobi');
+            $table->string('skill');
+            $table->integer('skill_persen');
+            // $table->date('mulai_org');
+            // $table->date('selesai_org');
+            // $table->string('prestasi');
+            // $table->date('bulantahun');
             $table->string('jabatan');
             $table->string('perusahaan');
             $table->date('mulai_kerja');

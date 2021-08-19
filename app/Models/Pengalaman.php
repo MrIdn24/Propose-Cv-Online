@@ -11,19 +11,17 @@ class Pengalaman extends Model
     protected $table = 'pengalaman';
     protected $fillable = [
         'deksripsi',
-        'nama_instansi',
-        'kota_instansi',
-        'mulai_belajar',
-        'selesai_belajar',
-        'nama_org',
-        'mulai_org',
-        'selesai_org',
-        'prestasi',
-        'bulantahun',
-        'jabatan',
-        'perusahaan',
-        'mulai_kerja',
-        'selesai_kerja',
+            'nama_instansi',
+            'kota_instansi',
+            'mulai_belajar',
+            'selesai_belajar',
+            'hobi',
+            'skill',
+            'skill_persen',
+            'jabatan',
+            'perusahaan',
+            'mulai_kerja',
+            'selesai_kerja',
     ];
 
     public function datadiris()

@@ -6,11 +6,9 @@
                 <div class="col-md-3 bulet1 me-4" style="opacity: 50%;">
                     <i class="fas fa-user text-white text-center"></i>
                 </div>
-                <div class="col-md-3 bulet2 me-4"><i
-                        class="fas fa-file-alt text-white text-center"></i>
+                <div class="col-md-3 bulet2 me-4"><i class="fas fa-file-alt text-white text-center"></i>
                 </div>
-                <div class="col-md-3 bulet3 me-4" style="opacity: 50%;"><i
-                        class="fas fa-pen   text-white text-center"></i>
+                <div class="col-md-3 bulet3 me-4" style="opacity: 50%;"><i class="fas fa-pen   text-white text-center"></i>
                 </div>
                 <div class="col-md-3 bulet3 me-4 " style="opacity: 50%;"><i
                         class="fas fa-check   text-white text-center"></i>
@@ -32,35 +30,73 @@
             <!-- riwayat pendidikan -->
             <div class="card shadow mb-4">
                 <div class="container">
-                        <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Riwayat Pendidikan</h4>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="mb-2">
-                                    <label for="exampleInputPassword1" class="form-label">Nama Instansi <i
-                                            class="fw-light">( Sekolah / Universitas / dll )</i> </label>
-                                    <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
-                                </div>
-                                <div class="mb-2">
-                                    <label for="exampleInputPassword1" class="form-label">Mulai</label>
-                                    <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
-                                </div>
+                    <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Riwayat Pendidikan</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Nama Instansi <i class="fw-light">(
+                                        Sekolah / Universitas / dll )</i> </label>
+                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
                             </div>
-                            <div class="col-6">
-                                <div class="mb-2">
-                                    <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
-                                            Kota, Negara )</i></label>
-                                    <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
-                                </div>
-                                <div class="mb-2 ">
-                                    <label for="exampleInputPassword1" class="form-label">Selesai</label>
-                                    <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
-                                </div>
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
                             </div>
                         </div>
+                        <div class="col-6">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
+                                        Kota, Negara )</i></label>
+                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-2 ">
+                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- hobi --}}
+            <div class="card shadow mb-4">
+                <div class="container">
+                    <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Hobi</h4>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Aktivitas sehari - hari <i
+                                        class="fw-light">( Olahraga / Bermain Musik )</i> </label>
+                                <input type="text" name="hobi" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Skill --}}
+            <div class="card shadow mb-4">
+                <div class="container">
+                    <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Skill</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Keahlian Khusus <i class="fw-light">(
+                                        Menggambar / Adobe Primer )</i> </label>
+                                <input type="text" name="skill" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label"> Keahlian <i class="fw-light">(
+                                        Menggambar / Adobe Primer )</i> </label>
+                                <input type="range" name="skill_persen" value="0" class="form-range"
+                                    id="exampleInputPassword1">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- organisasi -->
-            <div class="card shadow mb-4">
+            {{-- <div class="card shadow mb-4">
                 <div class="container">
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Pengalaman Organisasi</h4>
                         <div class="row">
@@ -88,9 +124,9 @@
                             </div>
                         </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- prestasi -->
-            <div class="card shadow mb-4">
+            {{-- <div class="card shadow mb-4">
                 <div class="container">
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Prestasi</h4>
                         <div class="row">
@@ -108,45 +144,46 @@
                             </div>
                         </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- pengalaman kerja -->
             <div class="card shadow mb-4">
                 <div class="container">
-                        <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Pengalaman Kerja</h4>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="mb-2">
-                                    <label for="exampleInputPassword1" class="form-label">Jabatan</label>
-                                    <input type="text" name="jabatan" class="form-control" id="exampleInputPassword1">
-                                </div>
-                                <div class="mb-2">
-                                    <label for="exampleInputPassword1" class="form-label">Mulai</label>
-                                    <input type="date"name="mulai_kerja" class="form-control" id="exampleInputPassword1">
-                                </div>
+                    <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Pengalaman Kerja</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Jabatan</label>
+                                <input type="text" name="jabatan" class="form-control" id="exampleInputPassword1">
                             </div>
-                            <div class="col-6">
-                                <div class="mb-2">
-                                    <label for="exampleInputPassword1" class="form-label">Perusahaan <i class="fw-light">(
-                                            Tulis: Nama, Kota )</i></label>
-                                    <input type="text" name="perusahaan" class="form-control" id="exampleInputPassword1">
-                                </div>
-                                <div class="mb-2 ">
-                                    <label for="exampleInputPassword1" class="form-label">Selesai</label>
-                                    <input type="date" name="selesai_kerja" class="form-control" id="exampleInputPassword1">
-                                </div>
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                <input type="date" name="mulai_kerja" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Perusahaan <i class="fw-light">(
+                                        Tulis: Nama, Kota )</i></label>
+                                <input type="text" name="perusahaan" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-2 ">
+                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                <input type="date" name="selesai_kerja" class="form-control" id="exampleInputPassword1">
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- button -->
-                <div class="jarak d-grid gap-2 d-md-flex justify-content-md-end ">
-                    <a class="btn btn-merah pe-5 ps-5  " href="{{ route('datadiri') }}" onclick="return confirm('Anda yakin keluar dari form?')">
-                        kembali
-                    </a>
-                    <button type="submit" class="btn btn-create pe-5 ps-5 ">
-                        Lanjut
-                    </button>
-                </div>
+            </div>
+            <!-- button -->
+            <div class="jarak d-grid gap-2 d-md-flex justify-content-md-end ">
+                <a class="btn btn-merah pe-5 ps-5  " href="{{ route('datadiri') }}"
+                    onclick="return confirm('Anda yakin keluar dari form?')">
+                    kembali
+                </a>
+                <button type="submit" class="btn btn-create pe-5 ps-5 ">
+                    Lanjut
+                </button>
+            </div>
             </form>
         </div>
     </section>

@@ -21,13 +21,13 @@ class CreateDatadirisTable extends Migration
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->string('jenis_kelamin');
-            $table->string('agama');
+            // $table->string('agama');
             $table->string('status_perkawinan');
             $table->string('email');
             $table->bigInteger('no_telp');
             $table->string('alamat');
-            $table->string('kota');
-            $table->string('negara');
+            // $table->string('kota');
+            // $table->string('negara');
             $table->timestamps();
         });
     }

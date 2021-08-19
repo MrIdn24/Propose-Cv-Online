@@ -24,7 +24,7 @@ Route::get('/index', [HomeController::class, 'index'])->name('home');
 // Route::get('/template-flat', function () {
 //     return view('template.templateflat');
 // });
-Route::get('/template', [HomeController::class, 'checkout'])->name('checkout');
+// Route::get('/template', [HomeController::class, 'checkout'])->name('checkout');
 
 Route::get('/template-flat', [CreateController::class, 'template']);
 
@@ -33,4 +33,5 @@ Route::prefix('/')->group(function () {
     Route::get('/pengalaman', [CreateController::class, 'createpengalam'])->name('pengalaman');
     Route::post('/datadiri/store', [CreateController::class, 'storedata'])->name('create.storedata');
     Route::post('/pengalaman/store', [CreateController::class, 'storepengalam'])->name('create.storepengalam');
+    Route::get('/template-baru', [CreateController::class, 'template_baru'])->name('checkout');
 });

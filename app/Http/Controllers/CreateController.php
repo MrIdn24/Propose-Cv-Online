@@ -67,13 +67,13 @@ class CreateController extends Controller
         $dtUpload->tempat_lahir = $request->tempat_lahir;
         $dtUpload->tanggal_lahir = $request->tanggal_lahir;
         $dtUpload->jenis_kelamin = $request->jenis_kelamin;
-        $dtUpload->agama = $request->agama;
+        // $dtUpload->agama = $request->agama;
         $dtUpload->status_perkawinan = $request->status_perkawinan;
         $dtUpload->email = $request->email;
         $dtUpload->no_telp = $request->no_telp;
         $dtUpload->alamat = $request->alamat;
-        $dtUpload->kota = $request->kota;
-        $dtUpload->negara = $request->negara;
+        // $dtUpload->kota = $request->kota;
+        // $dtUpload->negara = $request->negara;
 
         $nm->move(public_path() . '/images', $namafile);
         $dtUpload->save();
@@ -89,11 +89,9 @@ class CreateController extends Controller
             'kota_instansi' => 'required',
             'mulai_belajar' => 'required',
             'selesai_belajar' => 'required',
-            'nama_org' => 'required',
-            'mulai_org' => 'required',
-            'selesai_org' => 'required',
-            'prestasi' => 'required',
-            'bulantahun' => 'required',
+            'hobi' => 'required',
+            'skill' => 'required',
+            'skill_persen' => 'required',
             'jabatan' => 'required',
             'perusahaan' => 'required',
             'mulai_kerja' => 'required',
@@ -176,5 +174,13 @@ class CreateController extends Controller
 
         // dd($data);
         return view('template.templateflat', compact('data1', 'data2'));
+    }
+    public function template_baru()
+    {
+        $data1 = Datadiri::all();
+        $data2 = Pengalaman::all();
+
+        // dd($data);
+        return view('template.templatebaru', compact('data1', 'data2'));
     }
 }

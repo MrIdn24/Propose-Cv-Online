@@ -64,20 +64,20 @@
                                     <label for="exampleInputPassword1" class="form-label">No Telp</label>
                                     <input type="text" class="form-control" name="no_telp" id="exampleInputPassword1">
                                 </div>
-                                <div class="mb-2">
+                                {{-- <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">Kota</label>
                                     <input type="text" class="form-control" name="kota" id="exampleInputPassword1">
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="col-6">
                                 <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
                                     <input type="date" class="form-control" name="tanggal_lahir" id="exampleInputPassword1">
                                 </div>
-                                <div class="mb-2 ">
+                                {{-- <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Agama</label>
                                     <input type="text" class="form-control" name="agama" id="exampleInputPassword1">
-                                </div>
+                                </div> --}}
                                 <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Email</label>
                                     <input type="email" class="form-control" name="email" id="exampleInputPassword1">
@@ -86,10 +86,10 @@
                                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
                                     <input type="text" class="form-control" name="alamat" id="exampleInputPassword1">
                                 </div>
-                                <div class="mb-2 ">
+                                {{-- <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Negara</label>
                                     <input type="text" class="form-control" name="negara" id="exampleInputPassword1">
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         
