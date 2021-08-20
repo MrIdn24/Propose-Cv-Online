@@ -75,21 +75,21 @@ class CreateController extends Controller
         // $dtUpload->kota = $request->kota;
         // $dtUpload->negara = $request->negara;
 
-        $nm->move(public_path() . '/images', $namafile);
+        $nm->move(public_path() . '/imgup', $namafile);
         $dtUpload->save();
 
         return redirect()->route('pengalaman');
     }
     public function storepengalam(Request $request)
     {
-        // dd($request);
+        dd($request);
         $request->validate([
             'deksripsi' => 'required',
             'nama_instansi' => 'required',
             'kota_instansi' => 'required',
             'mulai_belajar' => 'required',
             'selesai_belajar' => 'required',
-            'hobi' => 'required',
+            // 'hobi' => 'required',
             'skill' => 'required',
             'skill_persen' => 'required',
             'jabatan' => 'required',

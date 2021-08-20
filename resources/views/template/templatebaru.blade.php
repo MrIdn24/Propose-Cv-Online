@@ -38,7 +38,9 @@
         /* foto */
         .left .foto img {
             width: 300px;
-            margin-left: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             margin-top: 50px;
         }
 
@@ -70,7 +72,7 @@
             position: relative;
             top: 8px;
             left: 30px;
-            text-transform: capitalize;
+            
         }
 
         /* skill */
@@ -219,15 +221,15 @@
     <section id="template-2">
         <div class="left">
             <div class="foto">
-                <img src="{{ asset('images/' . $dat->foto) }}" alt="">
+                <img src="{{ asset('imgup/' . $dat->foto) }}" alt="">
             </div>
 
             <div class="contact">
                 <h1>Data pribadi</h1>
-                <p style="padding-bottom: 20px;"><span class="bulet"></span><span
+                <p style="padding-bottom: 20px; text-transform: capitalize;"><span class="bulet"></span><span
                         class="text">{{ $dat->nama_depan . ' ' . $dat->nama_belakang }}</span>
                 </p>
-                <p style="padding-bottom: 20px;"><span class="bulet"></span> <span
+                <p style="padding-bottom: 20px; text-transform: capitalize;"><span class="bulet"></span> <span
                         class="text">{{ $dat->tempat_lahir . ', ' . Carbon\Carbon::parse($dat->tanggal_lahir)->isoFormat("D MMMM Y") }}</span>
                 </p>
                 <p style="padding-bottom: 20px;"><span class="bulet"></span> <span

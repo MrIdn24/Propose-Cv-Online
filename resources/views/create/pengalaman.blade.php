@@ -59,19 +59,39 @@
             </div>
             {{-- hobi --}}
             <div class="card shadow mb-4">
-                <div class="container">
+                <div class="container" id="dynamic_field">
                     <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Hobi</h4>
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-2">
                                 <label for="exampleInputPassword1" class="form-label">Aktivitas sehari - hari <i
                                         class="fw-light">( Olahraga / Bermain Musik )</i> </label>
-                                <input type="text" name="hobi" class="form-control" id="exampleInputPassword1">
+                                <input type="text" name="hobi[]" class="form-control">
                             </div>
                         </div>
+                        <!-- <a href="" class="addpengalaman mb-2 " style="text-decoration: none; color: black; font-size:12px; font-weight:bold;"><i class="far fa-plus me-1"></i> Tambah Data</a> -->
+                        <button class="btn btn-success w-50 " type="button" id="addpengalaman"><i
+                                class="far fa-plus me-1"></i> Tambah
+                            Data</button>
                     </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Aktivitas sehari - hari <i
+                                        class="fw-light">( Olahraga / Bermain Musik )</i> </label>
+                                <input type="text" name="hobi[]" class="form-control">
+                            </div>
+                        </div>
+                        <!-- <a href="" class="addpengalaman mb-2 " style="text-decoration: none; color: black; font-size:12px; font-weight:bold;"><i class="far fa-plus me-1"></i> Tambah Data</a> -->
+                        <button class="btn btn-success w-50 " type="button" id="addpengalaman"><i
+                                class="far fa-plus me-1"></i> Tambah
+                            Data</button>
+                    </div>
+
+
                 </div>
             </div>
+
             {{-- Skill --}}
             <div class="card shadow mb-4">
                 <div class="container">
@@ -187,9 +207,47 @@
             </form>
         </div>
     </section>
+
 @endsection
+
+
+
 @section('active')
     <li class="nav-item">
         <a class="nav-link me-5" aria-current="page" href="{{ route('home') }}">Home</a>
     </li>
 @endsection
+
+@push('script')
+
+    <script>
+        $(document).ready(function() {
+            var i = 1;
+            $('#addpengalaman').click(function() {
+                i++;
+                $('#dynamic_field').append(
+
+                    '<div class="row" id="row' + i + '">' +
+                    '<div class="col-12">' +
+                    '<div class="mb-2">' +
+                    '<label for="exampleInputPassword1" class="form-label">Aktivitas sehari - hari <i class="fw-light">( Olahraga / Bermain Musik )</i> </label>' +
+                    '<input type="text" name="hobi[]" class="form-control">' +
+                    '</div>' +
+                    '</div>' +
+                    '<button class="btn btn-danger btn_remove " type="button" id=' + i +
+                    '><i class="far fa-plus me-1"></i> Remove Data</button>' +
+                    '</div>'
+                );
+            });
+
+
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+
+
+        });
+    </script>
+@endpush
