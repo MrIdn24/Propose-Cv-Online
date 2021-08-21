@@ -82,14 +82,14 @@ class CreateController extends Controller
     }
     public function storepengalam(Request $request)
     {
-        dd($request);
+        // dd($request);
         $request->validate([
             'deksripsi' => 'required',
             'nama_instansi' => 'required',
             'kota_instansi' => 'required',
             'mulai_belajar' => 'required',
             'selesai_belajar' => 'required',
-            // 'hobi' => 'required',
+            'hobi' => 'required',
             'skill' => 'required',
             'skill_persen' => 'required',
             'jabatan' => 'required',
