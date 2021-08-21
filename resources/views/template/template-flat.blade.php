@@ -1,4 +1,8 @@
 {{-- {{ dd($data2) }} --}}
+@foreach ($data1 as $dat)
+@endforeach
+@foreach ($data2 as $dats)
+@endforeach
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +14,7 @@
     <style>
         /* side */
         .side {
-            background-color: fuchsia;
+            background-color: #154df0;
             float: left;
             width: 500px;
             height: 1700px;
@@ -127,7 +131,7 @@
 
         .foot {
             position: relative;
-            background-color: fuchsia;
+            background-color: #154df0;
             height: 30px;
             width: 1350px;
             top: 1730px;
@@ -150,7 +154,7 @@
             padding: 100px;
             text-align: center;
             height: 70px;
-            border: 5px solid fuchsia;
+            border: 5px solid #154df0;
             text-transform: uppercase;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 20px;
@@ -167,7 +171,7 @@
             padding-left: 12px;
             padding-right: 12px;
             padding-bottom: 25px;
-            border: 10px solid fuchsia;
+            border: 10px solid #154df0;
             border-radius: 100%;
             position: absolute;
             margin-top: 120px;
@@ -176,19 +180,19 @@
 
         .content .bulet span {
             font-size: 50px;
-            color: fuchsia;
+            color: #154df0;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         .content .bulet hr {
-            background-color: fuchsia;
+            background-color: #154df0;
             height: 215px;
             width: 10px;
             position: absolute;
             margin-top: -2px;
             margin-left: 8px;
             z-index: -999;
-            border: 1px solid fuchsia;
+            border: 1px solid #154df0;
         }
 
         .content .tentang-saya {
@@ -201,7 +205,7 @@
         }
 
         .content .tentang-saya span {
-            background-color: fuchsia;
+            background-color: #154df0;
             color: white;
             padding: 5px 400px 5px 10px;
         }
@@ -225,7 +229,7 @@
         }
 
         .content .pengalaman span {
-            background-color: fuchsia;
+            background-color: #154df0;
             color: white;
             padding: 5px 340px 5px 10px;
         }
@@ -253,7 +257,7 @@
         }
 
         .content .riwayat span {
-            background-color: fuchsia;
+            background-color: #154df0;
             color: white;
             padding: 5px 340px 5px 10px;
         }
@@ -278,7 +282,7 @@
     <section id="wraping">
         <div class="side">
             <div class="foto">
-                <img src="../images/54277375_423557478444792_3716742012217589760_n.jpg">
+                <img src="{{ asset('imgup/' . $dat->foto) }}">
             </div>
             <div class="side-content">
                 <div class="data">
@@ -288,10 +292,6 @@
                         <ul>
                             <li>
                                 Nama : <br>
-                                @foreach ($data1 as $dat)
-                                @endforeach
-                                @foreach ($data2 as $dats)
-                                @endforeach
                                 <span style="font-weight: normal;">{{ $dat->nama_depan . ' ' . $dat->nama_belakang}}</span>
                             </li>
                             <li>

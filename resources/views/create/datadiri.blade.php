@@ -1,4 +1,7 @@
 @extends('master')
+@section('title')
+    <title>Data diri</title>
+@endsection
 @section('content')
 
     <section id="input-one">

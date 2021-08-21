@@ -28,7 +28,7 @@
 
     @stack('after-style')
 
-    <title>Dashboard</title>
+    @yield('title')
 </head>
 
 <body>

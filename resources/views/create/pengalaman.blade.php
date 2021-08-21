@@ -1,4 +1,7 @@
 @extends('master')
+@section('title')
+    <title>Pengalaman</title>
+@endsection
 @section('content')
     <section id="input-one">
         <div class="breadcrumb container w-75 justify-content-evenly">

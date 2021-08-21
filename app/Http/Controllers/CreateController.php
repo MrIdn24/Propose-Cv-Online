@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Datadiri;
 use App\Models\Pengalaman;
+use App\Models\Template;
 use Illuminate\Http\Request;
 
 class CreateController extends Controller
@@ -30,6 +31,10 @@ class CreateController extends Controller
     public function createpengalam()
     {
         return view('create.pengalaman');
+    }
+    public function pilihtemplate()
+    {
+        return view('create.chtemplate');
     }
 
     /**
@@ -120,7 +125,25 @@ class CreateController extends Controller
 
         // $dtUpload->save();
         Pengalaman::create($request->all());
-        return redirect()->route('checkout');
+        return redirect()->route('choose-tmp');
+    }
+
+    public function storetmp(Request $request)
+    {
+        $request->validate([
+            'nama_template' => 'required',
+        ]);
+
+        Template::create($request->all());
+        return redirect()->route('template');
+    }
+
+    public function totemplate()
+    {
+        $data = Template::all();
+        foreach ($data as $dat) {
+        }
+        return redirect()->route($dat->nama_template);
     }
 
     /**
@@ -167,13 +190,13 @@ class CreateController extends Controller
         //
     }
 
-    public function template()
+    public function template_flat()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
 
         // dd($data);
-        return view('template.templateflat', compact('data1', 'data2'));
+        return view('template.template-flat', compact('data1', 'data2'));
     }
     public function template_baru()
     {
@@ -181,6 +204,6 @@ class CreateController extends Controller
         $data2 = Pengalaman::all();
 
         // dd($data);
-        return view('template.templatebaru', compact('data1', 'data2'));
+        return view('template.template-baru', compact('data1', 'data2'));
     }
 }

@@ -1,4 +1,7 @@
 @extends('master')
+@section('title')
+    <title>Propose Cv solusi cepat atasi masalah anda dala membuat Cv | 2021 Copyright ProposeCV | All right reserved | Made in Depok</title>
+@endsection
 @section('content')
 <!-- header -->
 <header>
