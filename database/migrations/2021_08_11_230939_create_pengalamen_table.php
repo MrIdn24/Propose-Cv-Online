@@ -22,6 +22,9 @@ class CreatePengalamenTable extends Migration
             $table->date('mulai_belajar');
             $table->date('selesai_belajar');
             $table->string('hobi');
+            $table->string('hobi2')->nullable();
+            $table->string('hobi3')->nullable();
+            $table->string('hobi4')->nullable();
             $table->string('skill');
             $table->integer('skill_persen');
             // $table->date('mulai_org');

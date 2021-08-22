@@ -103,28 +103,40 @@ class CreateController extends Controller
             'selesai_kerja' => 'required',
         ]);
 
-        // $dtUpload = new Pengalaman;
-        // $dtUpload->deksripsi = $request->deksripsi;
-        // $dtUpload->nama_instansi = $request->nama_instansi;
-        // $dtUpload->kota_instansi = $request->kota_instansi;
-        // $dtUpload->mulai_belajar = $request->mulai_belajar;
-        // $dtUpload->selesai_belajar = $request->selesai_belajar;
+        $dtUpload = new Pengalaman;
+        $dtUpload->deksripsi = $request->deksripsi;
+        $dtUpload->nama_instansi = $request->nama_instansi;
+        $dtUpload->kota_instansi = $request->kota_instansi;
+        $dtUpload->mulai_belajar = $request->mulai_belajar;
+        $dtUpload->selesai_belajar = $request->selesai_belajar;
         // $dtUpload->nama_org = $request->nama_org;
         // $dtUpload->mulai_org = $request->mulai_org;
         // $dtUpload->selesai_org = $request->selesai_org;
         // $dtUpload->prestasi = $request->prestasi;
         // $dtUpload->bulantahun = $request->bulantahun;
-        // $dtUpload->jabatan = $request->jabatan;
-        // $dtUpload->perusahaan = $request->perusahaan;
-        // $dtUpload->mulai_kerja = $request->mulai_kerja;
-        // $dtUpload->selesai_kerja = $request->selesai_kerja;
+        $dtUpload->jabatan = $request->jabatan;
+        $dtUpload->perusahaan = $request->perusahaan;
+        $dtUpload->mulai_kerja = $request->mulai_kerja;
+        $dtUpload->selesai_kerja = $request->selesai_kerja;
+        $dtUpload->skill = $request->skill;
+        $dtUpload->skill_persen = $request->skill_persen;
+        $dtUpload->hobi = $request->hobi;
+        $dtUpload->hobi2 = $request->hobi2;
+        $dtUpload->hobi3 = $request->hobi3;
+        $dtUpload->hobi4 = $request->hobi4;
+        $dtUpload->save();
         // $id = Datadiri::all();
         // foreach ($id as $i) {
         //     $dtUpload->id_datadiris = $i->id;
         // }
 
-        // $dtUpload->save();
-        Pengalaman::create($request->all());
+        // dd($request);
+        // Pengalaman::create([
+        //     'hobi2' => "$request->hobi2",
+        //     'hobi3' => "$request->hobi3",
+        //     'hobi4' => "$request->hobi4"
+        // ]);
+        // Pengalaman::create($request->all());
         return redirect()->route('choose-tmp');
     }
 

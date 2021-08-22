@@ -304,6 +304,30 @@
                     <span class="bulet"></span>
                     <span class="text">{{ $dats->hobi }}</span>
                 </p>
+                @if ($dats->hobi2 == Null)
+
+                @else
+                    <p style="padding-bottom: 5px;">
+                         <span class="bulet"></span>
+                         <span class="text">{{ $dats->hobi2 }}</span>
+                     </p>
+                @endif
+                @if ($dats->hobi3 == Null)
+                
+                @else
+                    <p style="padding-bottom: 5px;">
+                         <span class="bulet"></span>
+                         <span class="text">{{ $dats->hobi3 }}</span>
+                     </p>
+                @endif
+                @if ($dats->hobi4 == Null)
+                
+                @else
+                    <p style="padding-bottom: 5px;">
+                         <span class="bulet"></span>
+                         <span class="text">{{ $dats->hobi4 }}</span>
+                     </p>
+                @endif
                 {{-- <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
                     <span class="text">Mendengarkan musik</span>

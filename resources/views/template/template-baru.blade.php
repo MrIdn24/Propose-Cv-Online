@@ -255,11 +255,34 @@
             </div>
             <div class="hobi">
                 <h1>Hobi</h1>
-                <p style="padding-bottom: 20px;"><span class="bulet"></span><span
-                        class="text">{{ $dats->hobi }}</span>
-                    {{-- <p style="padding-bottom: 20px;"><span class="bulet"></span><span class="text">Mendengarkan musik</span>
-                <p style="padding-bottom: 20px;"><span class="bulet"></span><span class="text">Berenang</span> --}}
+                <p style="padding-bottom: 20px;">
+                    <span class="bulet"></span>
+                    <span class="text">{{ $dats->hobi }}</span>
                 </p>
+                @if ($dats->hobi2 == Null)
+                
+                @else
+                    <p style="padding-bottom: 20px;">
+                        <span class="bulet"></span>
+                        <span class="text">{{ $dats->hobi2 }}</span>
+                    </p>
+                @endif
+                @if ($dats->hobi3 == Null)
+                
+                @else
+                    <p style="padding-bottom: 20px;">
+                        <span class="bulet"></span>
+                        <span class="text">{{ $dats->hobi3 }}</span>
+                    </p>
+                @endif
+                @if ($dats->hobi4 == Null)
+                
+                @else
+                    <p style="padding-bottom: 20px;">
+                        <span class="bulet"></span>
+                        <span class="text">{{ $dats->hobi4 }}</span>
+                    </p>
+                @endif
             </div>
         </div>
         <div class="right">
