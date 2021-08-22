@@ -30,13 +30,17 @@
 
         .side .foto {
             /* background-color: grey; */
-            height: 350px;
-            width: 350px;
+            /* height: 350px;
+            width: 350px; */
             margin: 50px auto;
         }
 
         .side img {
             border-radius: 50%;
+            height: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .side .side-content {

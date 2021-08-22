@@ -206,4 +206,12 @@ class CreateController extends Controller
         // dd($data);
         return view('template.template-baru', compact('data1', 'data2'));
     }
+    public function template_3()
+    {
+        $data1 = Datadiri::all();
+        $data2 = Pengalaman::all();
+
+        // dd($data);
+        return view('template.template-3', compact('data1', 'data2'));
+    }
 }

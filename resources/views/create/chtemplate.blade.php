@@ -12,8 +12,7 @@
                 <div class="col-md-3 bulet2 me-4" style="opacity: 50%;"><i
                         class="fas fa-file-alt text-white text-center"></i>
                 </div>
-                <div class="col-md-3 bulet3 me-4"><i
-                        class="fas fa-pen   text-white text-center"></i>
+                <div class="col-md-3 bulet3 me-4"><i class="fas fa-pen   text-white text-center"></i>
                 </div>
                 <div class="col-md-3 bulet3 me-4 " style="opacity: 50%;"><i
                         class="fas fa-check   text-white text-center"></i>
@@ -23,10 +22,16 @@
         <div class="container">
             <div class="row mt-5 justify-content-md-center pt-5">
                 <div class="col-md-4">
-                    <img class="template" id="mtp1" src="{{ asset('/images/template/DSTC3.svg') }}" width="200px" onclick="pilih(1)">
+                    <img class="template" id="mtp1" src="{{ asset('/images/template/DSTC3.svg') }}" width="200px"
+                        onclick="pilih(1)">
                 </div>
                 <div class="col-md-4">
-                    <img class="template" id="mtp2" src="{{ asset('/images/template/DSTC2.png') }}" width="200px" onclick="pilih(2)">
+                    <img class="template" id="mtp2" src="{{ asset('/images/template/DSTC2.png') }}" width="200px"
+                        onclick="pilih(2)">
+                </div>
+                <div class="col-md-4">
+                    <img class="template" id="mtp3" src="{{ asset('/images/template/DSTC1.svg') }}" width="200px"
+                        onclick="pilih(3)">
                 </div>
             </div>
             <form action="{{ route('choose-tmp.store') }}" method="post" class="mt-5">
@@ -49,17 +54,27 @@
         function pilih(a) {
             if (a == 1) {
                 document.getElementById('tmp').value = 'template-baru';
-            }else{
+            } else if (a == 2) {
                 document.getElementById('tmp').value = 'template-flat';
+            } else {
+                document.getElementById('tmp').value = 'template-3';
             }
+
+
             if (a == 1) {
                 document.getElementById('mtp1').style.border = '3px solid rgb(112, 112, 112)';
                 document.getElementById('mtp2').style.border = 'none';
-            }else{
+                document.getElementById('mtp3').style.border = 'none';
+            } else if (a == 2) {
                 document.getElementById('mtp2').style.border = '3px solid rgb(112, 112, 112)';
                 document.getElementById('mtp1').style.border = 'none';
+                document.getElementById('mtp3').style.border = 'none';
+            } else {
+                document.getElementById('mtp3').style.border = '3px solid rgb(112, 112, 112)';
+                document.getElementById('mtp2').style.border = 'none';
+                document.getElementById('mtp1').style.border = 'none';
             }
-            
+
         }
     </script>
 @endpush

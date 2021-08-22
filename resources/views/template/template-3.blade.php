@@ -1,3 +1,9 @@
+{{-- {{ dd($data2) }} --}}
+@foreach ($data1 as $dat)
+@endforeach
+@foreach ($data2 as $dats)
+@endforeach
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        
+
     <!-- css -->
     <!-- <link rel="stylesheet" href="template-3-style.css"> -->
     <style>
@@ -28,10 +34,6 @@
             float: left;
             width: 440px;
             height: 1300px;
-
-            /* font-family: Arial,
-        Helvetica,
-        sans-serif; */
             position: relative;
             left: -8px;
             top: -9px;
@@ -277,64 +279,60 @@
     <section id="template-3">
         <div class="left">
             <div class="foto">
-                <img src="../images/25231.png" alt="">
+                <img src="{{ asset('imgup/' . $dat->foto) }}" alt="">
             </div>
             <div class="tentang-saya">
                 <h2>Tentang Saya</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam harum tenetur sunt accusantium officia
-                    hic, sequi vel assumenda natus illo alias maiores, sed eius! Non velit illo nobis ratione
-                    praesentium.</p>
+                <p>{{ $dats->deksripsi }}</p>
             </div>
             <div class="kemampuan">
                 <h2>Kemampuan</h2>
-                <p>Css</p>
+                <p>{{ $dats->skill }}</p>
                 <div class="kemampuan-persen">
-                    <div class="kemampuan-persentase" style="width: 65%;">
+                    <div class="kemampuan-persentase" style="width: {{ $dats->skill_persen }}%;">
                     </div>
                 </div>
-                <p>html</p>
+                {{-- <p>html</p>
                 <div class="kemampuan-persen">
                     <div class="kemampuan-persentase" style="width: 55%;">
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="hobi">
                 <h2>Hobi</h2>
                 <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
-                    <span class="text">Bermain Bola</span>
+                    <span class="text">{{ $dats->hobi }}</span>
                 </p>
-                <p style="padding-bottom: 5px;">
+                {{-- <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
                     <span class="text">Mendengarkan musik</span>
                 </p>
                 <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
                     <span class="text">Berenang</span>
-                </p>
+                </p> --}}
             </div>
         </div>
         <div class="right">
             <div class="bulet"></div>
-            <h1>Muhammad Tarmidzi Bariq</h1>
+            <h1>{{ $dat->nama_depan . ' ' . $dat->nama_belakang }}</h1>
             <div class="identitas">
                 <h2>Identitas</h2>
                 <div class="text">
-                    Nama:<p>Muhammad tarmidzi Bariq</p>
+                    Nama:<p>{{ $dat->nama_depan . ' ' . $dat->nama_belakang }}</p>
                 </div>
                 <div class="text">
-                    Tanggal Lahir:<p>Depok, 30 Juli 2020</p>
+                    Tanggal Lahir:<p>{{ $dat->tempat_lahir . ', ' . Carbon\Carbon::parse($dat->tanggal_lahir)->isoFormat("D MMMM Y") }}</p>
                 </div>
                 <div class="text">
-                    Jenis Kelamin:<p>laki - laki</p>
+                    Jenis Kelamin:<p>{{ $dat->jenis_kelamin}}</p>
                 </div>
                 <div class="text">
-                    no telp:<p>62 829 9203 9348</p>
+                    no telp:<p>{{ $dat->no_telp}}</p>
                 </div>
                 <div class="text">
-                    Alamat:<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quo eum vel
-                        voluptatibus, laboriosam ea excepturi neque nam ipsam magni et praesentium cumque nemo dolores
-                        minus eius ullam nulla odio. </p>
+                    Alamat:<p>{{ $dat->alamat}} </p>
                 </div>
             </div>
             <!-- Pendidikan -->
@@ -342,18 +340,18 @@
                 <h2>Riwayat Pendidikan</h2>
                 <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
-                    <span class="text">2010 - 2016
-                        <span style="margin-left: 10px;">Sdit taruna bhakti
+                    <span class="text">{{ date('Y', strtotime($dats->mulai_belajar)) . ' - ' . date('Y', strtotime($dats->selesai_belajar)) }}
+                        <span style="margin-left: 10px;">{{ $dats->nama_instansi . ', ' . $dats->kota_instansi }}
                         </span>
                     </span>
                 </p>
-                <p style="padding-bottom: 5px;">
+                {{-- <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
                     <span class="text">2010 - 2016
                         <span style="margin-left: 10px;">Smpit arafah
                         </span>
                     </span>
-                </p>
+                </p> --}}
 
             </div>
             <!-- pekerjaan -->
@@ -361,18 +359,18 @@
                 <h2>Riwayat Pekerjaan</h2>
                 <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
-                    <span class="text">2010 - 2016
-                        <span style="margin-left: 10px;">Sdit taruna bhakti
+                    <span class="text">{{ date('Y', strtotime($dats->mulai_kerja)) . ' - ' . date('Y', strtotime($dats->selesai_kerja)) }}
+                        <span style="margin-left: 10px;">{{ $dats->jabatan . ', ' . $dats->perusahaan }}
                         </span>
                     </span>
                 </p>
-                <p style="padding-bottom: 5px;">
+                {{-- <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
                     <span class="text">2010 - 2016
                         <span style="margin-left: 10px;">Smpit arafah
                         </span>
                     </span>
-                </p>
+                </p> --}}
             </div>
         </div>
         <footer></footer>
