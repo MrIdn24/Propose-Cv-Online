@@ -96,10 +96,9 @@
                         </div>
                         <div class="col-6">
                             <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label"> Keahlian <i class="fw-light">(
-                                        Menggambar / Adobe Primer )</i> </label>
                                 <input type="range" name="skill_persen" value="0" class="form-range"
-                                    id="exampleInputPassword1">
+                                    id="exampleInputPassword1" oninput="nilai(value)">
+                                    <output id="volume" class="pl-5 volume" style="position: relative; top: 10px; left: -15px;"></output>
                             </div>
                         </div>
                     </div>
@@ -209,6 +208,12 @@
 @endsection
 
 @push('script')
+
+    <script>
+        function nilai(vol) {
+            document.querySelector('#volume').value = vol + '%';
+        }
+    </script>
 
     {{-- <script>
         $(document).ready(function() {
