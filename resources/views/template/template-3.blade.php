@@ -276,7 +276,7 @@
 </head>
 
 <body>
-    <section id="template-3">
+    <section id="template-3" onload="window.print();">
         <div class="left">
             <div class="foto">
                 <img src="{{ asset('imgup/' . $dat->foto) }}" alt="">

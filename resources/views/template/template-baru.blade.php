@@ -217,8 +217,8 @@
     </style>
 </head>
 
-<body>
-    <section id="template-2">
+<body onload="window.print();">
+    <section id="template-2" >
         <div class="left">
             <div class="foto">
                 <img src="{{ asset('imgup/' . $dat->foto) }}" alt="">

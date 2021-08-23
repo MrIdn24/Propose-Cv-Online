@@ -16,6 +16,7 @@
         .side {
             background-color: #154df0;
             float: left;
+            /* width: 400px; */
             width: 500px;
             height: 1700px;
             color: white;
@@ -98,7 +99,7 @@
         }
 
         .side .side-content .data .isi-skill ul li .a {
-            width: 250px;
+            /* width: 250px; */
             border-right: 50px solid grey;
         }
 
@@ -148,7 +149,9 @@
 
         .content {
             position: absolute;
+            /* left: 437px; */
             left: 537px;
+            /* width: 660px; */
             width: 810px;
             z-index: 999;
             top: 0px;
@@ -282,7 +285,7 @@
     </style>
 </head>
 
-<body>
+<body onload="window.print();">
     <section id="wraping">
         <div class="side">
             <div class="foto">
@@ -325,10 +328,10 @@
                     <div class="isi-skill">
                         <ul>
                             <li>
-                                VS Code
-                                <span class="bar-skill a"></span>
+                                {{ $dats->skill }}
+                                <span class="bar-skill a" style="width: {{ $dats->skill_persen }}%;"></span>
                             </li>
-                            <li>
+                            {{-- <li>
                                 Photoshop
                                 <span class="bar-skill b"></span>
                             </li>
@@ -339,7 +342,7 @@
                             <li>
                                 Corel Draw
                                 <span class="bar-skill d"></span>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                     Hobi
@@ -347,17 +350,29 @@
                     <div class="isi-hobi">
                         <ul>
                             <li>
-                                Membaca
+                                {{ $dats->hobi }}
                             </li>
+                            @if ($dats->hobi2 == Null)
+                
+                            @else
                             <li>
-                                Menggambar
+                                {{ $dats->hobi2 }}
                             </li>
+                            @endif
+                            @if ($dats->hobi3 == Null)
+                
+                            @else
+                            @endif
+                             <li>
+                                {{ $dats->hobi3 }}
+                            </li>
+                            @if ($dats->hobi4 == Null)
+                
+                            @else
                             <li>
-                                Bermain Game
+                                {{ $dats->hobi4 }}
                             </li>
-                            <li>
-                                Jalan-jalan
-                            </li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -387,13 +402,13 @@
                 <div class="isi-pengalaman">
                     <table>
                         <tr>
-                            <th>kasir</th>
-                            <td style="width: 300px;"> - Indomaret</td>
-                            <td style="width: 80px;">: </td>
-                            <td>2019 - 2020</td>
+                            <th style="padding-right: 20px">{{ $dats->perusahaan}}</th>
+                            <td > - {{ $dats->jabatan}}</td>
+                            <td >: </td>
+                            <td>{{ date('Y', strtotime($dats->mulai_kerja)) . ' - ' . date('Y', strtotime($dats->selesai_kerja)) }}</td>
                         </tr>
-                        <tr>
-                            <th>Marketing</th>
+                        {{-- <tr>
+                            <th>Marketingasd</th>
                             <td> - CVPropose</td>
                             <td>: </td>
                             <td>2021 - 2022</td>
@@ -403,7 +418,7 @@
                             <td> - CVPropose</td>
                             <td>: </td>
                             <td>2022 - 2024</td>
-                        </tr>
+                        </tr> --}}
                     </table>
                 </div>
             </div>
@@ -415,19 +430,9 @@
                 <div class="isi-riwayat">
                     <table>
                         <tr>
-                            <th style="width: 420px;">mi al-hidayah</th>
+                            <th style="width: 420px;">{{ $dats->nama_instansi . ', ' . $dats->kota_instansi }}</th>
                             <td style="width: 70px;">: </td>
-                            <td>2019 - 2020</td>
-                        </tr>
-                        <tr>
-                            <th>mts al-hidayah</th>
-                            <td>: </td>
-                            <td>2021 - 2022</td>
-                        </tr>
-                        <tr>
-                            <th>smk taruna bhakti</th>
-                            <td>: </td>
-                            <td>2022 - 2024</td>
+                            <td>{{ date('Y', strtotime($dats->mulai_belajar)) . ' - ' . date('Y', strtotime($dats->selesai_belajar)) }}</td>
                         </tr>
                     </table>
 

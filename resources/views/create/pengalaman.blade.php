@@ -4,6 +4,7 @@
 @endsection
 @section('content')
     <section id="input-one">
+        {{-- breadcrumb --}}
         <div class="breadcrumb container w-75 justify-content-evenly">
             <div class="row">
                 <div class="col-md-3 bulet1 me-4" style="opacity: 50%;">
@@ -31,13 +32,13 @@
                 </div>
             </div>
             <!-- riwayat pendidikan -->
-            <div class="card shadow mb-5 pb-5">
+            <div class="card shadow mb-4 ">
                 <div class="container">
                     <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Riwayat Pendidikan</h4>
                     <div class="row mb-4">
                         <div class="col-6 mb-3">
                             <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">SD</label>
+                                <label for="exampleInputPassword1" class="form-label">Nama Instansi</label>
                                 <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
                             </div>
                             <div class="mb-2">
@@ -56,8 +57,8 @@
                                 <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
                             </div>
                         </div>
-                        <hr>
-                        <div class="col-6 mt-3 mb-4">
+                        {{-- <hr> --}}
+                        {{-- <div class="col-6 mt-3 mb-4">
                             <div class="mb-2">
                                 <label for="exampleInputPassword1" class="form-label">SMP</label>
                                 <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
@@ -99,7 +100,7 @@
                                 <label for="exampleInputPassword1" class="form-label">Selesai</label>
                                 <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -127,7 +128,7 @@
                                         <input type="text" name="hobi3" class="form-control mb-4 d-none" id="hobi3">
                                     </div>
                                     <div class="col-md-1">
-                                        <i id="tambah2" class="fa fa-plus d-none fs-6 text-right btn-primary p-1 mt-2 me-3 data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Hobi""></i>
+                                        <i id="tambah2" class="fa fa-plus d-none fs-6 text-right btn-primary p-1 mt-2 me-3"data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Hobi"></i>
                                         <i id="hapus2" class="fa fa-minus fs-6 text-right btn-danger p-1 mt-2 me-3 d-none"></i>
                                     </div>
                                 </div>
@@ -169,7 +170,7 @@
                                     <output id="volume" class="pl-5 volume" style="position: relative; top: 10px; left: -15px;"></output>
                             </div>
                         </div>
-                        <div class="col-6">
+                        {{-- <div class="col-6">
                             <div class="mb-4">
                                 <div class="row">
                                     <div class="col-md-1 pt-1">
@@ -228,7 +229,7 @@
                                     id="exampleInputPassword1" oninput="nilai(value)">
                                     <output id="volume" class="pl-5 volume" style="position: relative; top: 10px; left: -15px;"></output>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
