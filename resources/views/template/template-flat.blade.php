@@ -285,7 +285,7 @@
     </style>
 </head>
 
-<body onload="window.print();">
+<body>
     <section id="wraping">
         <div class="side">
             <div class="foto">
@@ -331,18 +331,22 @@
                                 {{ $dats->skill }}
                                 <span class="bar-skill a" style="width: {{ $dats->skill_persen }}%;"></span>
                             </li>
-                            {{-- <li>
-                                Photoshop
-                                <span class="bar-skill b"></span>
-                            </li>
-                            <li>
-                                Ms Word
-                                <span class="bar-skill c"></span>
-                            </li>
-                            <li>
-                                Corel Draw
-                                <span class="bar-skill d"></span>
-                            </li> --}}
+                            @if ($dats->skill2 == Null)
+                                
+                            @else
+                                <li>
+                                    {{ $dats->skill2 }}
+                                    <span class="bar-skill a" style="width: {{ $dats->skill_persen2 }}%;"></span>
+                                </li>
+                            @endif
+                            @if ($dats->skill3 == Null)
+                                
+                            @else
+                                <li>
+                                    {{ $dats->skill3 }}
+                                    <span class="bar-skill a" style="width: {{ $dats->skill_persen3 }}%;"></span>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                     Hobi

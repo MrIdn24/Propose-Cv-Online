@@ -108,6 +108,10 @@
             <div class="card shadow mb-4">
                 <div class="container" id="dynamic_field">
                     <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Hobi</h4>
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <strong>Tips! </strong>Maksimal hobi 4 untuk tampilan Cv lebih bagus
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-2">
@@ -142,11 +146,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <button class="btn btn-success " type="button" id="addpengalaman"><i
-                                    class="far fa-plus me-1"></i> Tambah
-                                Data</button> --}}
                         </div>
-                        <!-- <a href="" class="addpengalaman mb-2 " style="text-decoration: none; color: black; font-size:12px; font-weight:bold;"><i class="far fa-plus me-1"></i> Tambah Data</a> -->
                     </div>
                 </div>
             </div>
@@ -155,6 +155,10 @@
             <div class="card shadow mb-4">
                 <div class="container">
                     <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Skill</h4>
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <strong>Tips! </strong>Maksimal skill 4 untuk tampilan Cv lebih bagus
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                     <div class="row">
                         <div class="col-6">
                             <div class="mb-4">
@@ -165,71 +169,51 @@
                         </div>
                         <div class="col-6">
                             <div class="mb-3">
-                                <input type="range" name="skill_persen" value="0" class="form-range mt-4 pt-4"
+                                <output id="volume" class="pl-5 volume" style="position: relative; top: 15px; left: 50%;"></output>
+                                <input type="range" name="skill_persen" value="0" class="form-range mt-3"
                                     id="exampleInputPassword1" oninput="nilai(value)">
-                                    <output id="volume" class="pl-5 volume" style="position: relative; top: 10px; left: -15px;"></output>
                             </div>
                         </div>
-                        {{-- <div class="col-6">
-                            <div class="mb-4">
+                        <div class="col-6">
+                            <div class="mb-1">
                                 <div class="row">
                                     <div class="col-md-1 pt-1">
-                                        <i class="fas fa-plus btn-primary p-2"></i>
-                                        <i class="fas fa-minus btn-danger d-none p-2"></i>
+                                        <i id="tbhs1" class="fas fa-plus btn-primary p-2"></i>
+                                        <i id="hps1" class="fas fa-minus btn-danger d-none p-2"></i>
                                     </div>
                                     <div class="col-md-11">
-                                        <input type="text" name="skill" class="form-control" id="skill2">
+                                        <input type="text" name="skill2" class="form-control d-none" id="skill2">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-4">
-                                <input type="range" name="skill_persen" value="0" class="form-range pt-2"
-                                    id="skillps2" oninput="nilai(value)">
-                                    <output id="volume" class="pl-5 volume" style="position: relative; top: 10px; left: -15px;"></output>
+                            <div class="mb-1">
+                                <output id="volume2" class="pl-5 volume" style="position: relative; top: -10px; left: 50%;"></output>
+                                <input type="range" name="skill_persen2" value="0" class="form-range pb-5 d-none"
+                                    id="skillps2" oninput="nilai2(value)">
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-4">
+                            <div class="mb-1">
                                 <div class="row">
                                     <div class="col-md-1 pt-1">
-                                        <i class="fas fa-plus btn-primary p-2"></i>
-                                        <i class="fas fa-minus btn-danger d-none p-2"></i>
+                                        <i id="tbhs2" class="fas fa-plus btn-primary p-2 d-none"></i>
+                                        <i id="hps2" class="fas fa-minus btn-danger d-none p-2"></i>
                                     </div>
                                     <div class="col-md-11">
-                                        <input type="text" name="skill" class="form-control" id="exampleInputPassword1">
+                                        <input type="text" name="skill3" class="form-control d-none" id="skill3">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-4">
-                                <input type="range" name="skill_persen" value="0" class="form-range pt-2"
-                                    id="exampleInputPassword1" oninput="nilai(value)">
-                                    <output id="volume" class="pl-5 volume" style="position: relative; top: 10px; left: -15px;"></output>
+                            <div class="mb-1">
+                                <output id="volume3" class="pl-5 volume" style="position: relative; top: 10px; left: 50%;"></output>
+                                <input type="range" name="skill_persen3" value="0" class="form-range pb-5 d-none"
+                                    id="skillps3" oninput="nilai3(value)">
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="mb-4">
-                                <div class="row">
-                                    <div class="col-md-1 pt-1">
-                                        <i class="fas fa-plus btn-primary p-2"></i>
-                                        <i class="fas fa-minus btn-danger d-none p-2"></i>
-                                    </div>
-                                    <div class="col-md-11">
-                                        <input type="text" name="skill" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="mb-4">
-                                <input type="range" name="skill_persen" value="0" class="form-range pt-2"
-                                    id="exampleInputPassword1" oninput="nilai(value)">
-                                    <output id="volume" class="pl-5 volume" style="position: relative; top: 10px; left: -15px;"></output>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -262,7 +246,7 @@
                             </div>
                         </div>
                 </div>
-            </div> --}}
+            </div>
             <!-- prestasi -->
             {{-- <div class="card shadow mb-4">
                 <div class="container">
@@ -342,6 +326,12 @@
         function nilai(vol) {
             document.querySelector('#volume').value = vol + '%';
         }
+        function nilai2(vol) {
+            document.querySelector('#volume2').value = vol + '%';
+        }
+        function nila3(vol) {
+            document.querySelector('#volume3').value = vol + '%';
+        }
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -369,13 +359,14 @@
                 $('#tambah2').addClass('d-none');
                 $('#hapus2').removeClass('d-none');
                 $('#tambah3').removeClass('d-none');
+                $('#hapus1').addClass('d-none');
             }
             function hapus2() {
-                
                 $('#hobi3').addClass('d-none');
                 $('#tambah2').removeClass('d-none');
                 $('#hapus2').addClass('d-none');
                 $('#tambah3').addClass('d-none');
+                $('#hapus1').removeClass('d-none');
             }
 
             function tambah3() {
@@ -383,12 +374,13 @@
                 $('#hobi4').removeClass('d-none');
                 $('#tambah3').addClass('d-none');
                 $('#hapus3').removeClass('d-none');
+                $('#hapus2').addClass('d-none');
             }
             function hapus3() {
-                
                 $('#hobi4').addClass('d-none');
                 $('#tambah3').removeClass('d-none');
                 $('#hapus3').addClass('d-none');
+                $('#hapus2').removeClass('d-none');
             }
 
 
@@ -415,6 +407,56 @@
 
             // Akhir Hobi
 
+            // Awal Skill
+
+            function tambahs1() {
+                $('#tbhs1').addClass('d-none');
+                $('#hps1').removeClass('d-none');
+                $('#skill2').removeClass('d-none');
+                $('#skillps2').removeClass('d-none');
+                $('#tbhs2').removeClass('d-none');
+            }
+            function hapusS1() {
+                $('#tbhs1').removeClass('d-none');
+                $('#hps1').addClass('d-none');
+                $('#skill2').addClass('d-none');
+                $('#skillps2').addClass('d-none');
+                $('#tbhs2').addClass('d-none');
+            }
+
+            function tambahs2() {
+                $('#tbhs2').addClass('d-none');
+                $('#hps2').removeClass('d-none');
+                $('#skill3').removeClass('d-none');
+                $('#skillps3').removeClass('d-none');
+                $('#hps1').addClass('d-none');
+
+            }
+            function hapusS2() {
+                $('#tbhs2').removeClass('d-none');
+                $('#hps2').addClass('d-none');
+                $('#skill3').addClass('d-none');
+                $('#skillps3').addClass('d-none');
+                $('#hps1').removeClass('d-none');
+            }
+
+            $('#tbhs1').click(function () {
+                tambahs1();
+            });
+
+            $('#hps1').click(function () {
+                hapusS1();
+            });
+
+            $('#tbhs2').click(function () {
+                tambahs2();
+            });
+
+            $('#hps2').click(function () {
+                hapusS2();
+            });
+
+            // AKhir Skill
             
         })
     </script>

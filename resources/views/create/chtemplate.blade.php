@@ -38,7 +38,7 @@
                 @csrf
                 <input type="text" name="nama_template" id="tmp" class="d-none">
                 <div class="jarak d-grid gap-2 d-md-flex justify-content-md-end ">
-                    <button type="submit" class="btn btn-create pe-5 ps-5 ">Lanjut</button>
+                    <button type="submit" class="btn btn-create pe-5 ps-5 "><i class="fa fa-file-pdf"></i> Print PDF</button>
                 </div>
             </form>
         </div>

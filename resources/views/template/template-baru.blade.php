@@ -217,7 +217,7 @@
     </style>
 </head>
 
-<body onload="window.print();">
+<body>
     <section id="template-2" >
         <div class="left">
             <div class="foto">
@@ -243,15 +243,22 @@
                 <div class="skill-persen">
                     <div class="skill-persentase-1" style="width: {{ $dats->skill_persen }}%;"></div>
                 </div>
-                {{-- <h1>Skill</h1>
-                <h2>microsoft word</h2>
-                <div class="skill-persen">
-                    <div class="skill-persentase-1"></div>
-                </div>
-                <h2>photoshop</h2>
-                <div class="skill-persen">
-                    <div class="skill-persentase-2"></div>
-                </div> --}}
+                @if ($dats->skill2 == Null)
+
+                @else
+                    <h2>{{ $dats->skill2 }}</h2>
+                    <div class="skill-persen">
+                        <div class="skill-persentase-1" style="width: {{ $dats->skill_persen2 }}%;"></div>
+                    </div>
+                @endif
+                @if ($dats->skill3 == Null)
+
+                @else
+                     <h2>{{ $dats->skill3 }}</h2>
+                    <div class="skill-persen">
+                        <div class="skill-persentase-1" style="width: {{ $dats->skill_persen3 }}%;"></div>
+                    </div>
+                @endif
             </div>
             <div class="hobi">
                 <h1>Hobi</h1>

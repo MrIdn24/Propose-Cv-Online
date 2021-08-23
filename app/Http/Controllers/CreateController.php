@@ -6,6 +6,7 @@ use App\Models\Datadiri;
 use App\Models\Pengalaman;
 use App\Models\Template;
 use Illuminate\Http\Request;
+use PDF;
 
 class CreateController extends Controller
 {
@@ -102,6 +103,7 @@ class CreateController extends Controller
             'mulai_kerja' => 'required',
             'selesai_kerja' => 'required',
         ]);
+        // dd($request);
 
         $dtUpload = new Pengalaman;
         $dtUpload->deksripsi = $request->deksripsi;
@@ -120,10 +122,10 @@ class CreateController extends Controller
         $dtUpload->selesai_kerja = $request->selesai_kerja;
         $dtUpload->skill = $request->skill;
         $dtUpload->skill_persen = $request->skill_persen;
-        // $dtUpload->skill2 = $request->skill2;
-        // $dtUpload->skill_persen2 = $request->skill_persen2;
-        // $dtUpload->skill3 = $request->skill3;
-        // $dtUpload->skill_persen3 = $request->skill_persen3;
+        $dtUpload->skill2 = $request->skill2;
+        $dtUpload->skill_persen2 = $request->skill_persen2;
+        $dtUpload->skill3 = $request->skill3;
+        $dtUpload->skill_persen3 = $request->skill_persen3;
         $dtUpload->hobi = $request->hobi;
         $dtUpload->hobi2 = $request->hobi2;
         $dtUpload->hobi3 = $request->hobi3;
@@ -211,23 +213,23 @@ class CreateController extends Controller
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
 
-        // dd($data);
-        return view('template.template-flat', compact('data1', 'data2'));
+        $pdf = PDF::loadView('template.template-flat', compact('data1', 'data2'))->setPaper('a4');
+        return $pdf->download('template-flat.pdf');
     }
     public function template_baru()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
 
-        // dd($data);
-        return view('template.template-baru', compact('data1', 'data2'));
+        $pdf = PDF::loadView('template.template-baru', compact('data1', 'data2'))->setPaper('a4');
+        return $pdf->download('template-baru.pdf');
     }
     public function template_3()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
 
-        // dd($data);
-        return view('template.template-3', compact('data1', 'data2'));
+        $pdf = PDF::loadView('template.template-3', compact('data1', 'data2'))->setPaper('a4');
+        return $pdf->download('template-3.pdf');
     }
 }

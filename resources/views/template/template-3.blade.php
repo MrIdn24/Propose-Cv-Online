@@ -292,11 +292,24 @@
                     <div class="kemampuan-persentase" style="width: {{ $dats->skill_persen }}%;">
                     </div>
                 </div>
-                {{-- <p>html</p>
-                <div class="kemampuan-persen">
-                    <div class="kemampuan-persentase" style="width: 55%;">
+                @if ($dats->skill2 == Null)
+
+                @else
+                    <p>{{ $dats->skill2 }}</p>
+                    <div class="kemampuan-persen">
+                        <div class="kemampuan-persentase" style="width: {{ $dats->skill_persen2 }}%;">
+                        </div>
                     </div>
-                </div> --}}
+                @endif
+                @if ($dats->skill3 == Null)
+
+                @else
+                    <p>{{ $dats->skill3 }}</p>
+                    <div class="kemampuan-persen">
+                        <div class="kemampuan-persentase" style="width: {{ $dats->skill_persen3 }}%;">
+                        </div>
+                    </div>
+                @endif
             </div>
             <div class="hobi">
                 <h2>Hobi</h2>
