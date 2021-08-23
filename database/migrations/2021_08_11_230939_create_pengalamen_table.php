@@ -27,6 +27,10 @@ class CreatePengalamenTable extends Migration
             $table->string('hobi4')->nullable();
             $table->string('skill');
             $table->integer('skill_persen');
+            $table->string('skill2')->nullable();
+            $table->integer('skill_persen2')->nullable();
+            $table->string('skill3')->nullable();
+            $table->integer('skill_persen3')->nullable();
             // $table->date('mulai_org');
             // $table->date('selesai_org');
             // $table->string('prestasi');

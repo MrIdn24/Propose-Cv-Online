@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                                    <input type="text" class="form-control" name="alamat" id="exampleInputPassword1">
+                                    <input type="text" class="form-control" name="alamat"  maxlength="300" placeholder="maks 100 " id="exampleInputPassword1">
                                 </div>
                                 {{-- <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Negara</label>

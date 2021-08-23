@@ -28,7 +28,7 @@
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Tentang Saya</h4>
                         <label for="exampleInputPassword1" class="form-label">Deskripsi Diri</label>
                         <textarea class="form-control" name="deksripsi" id="" cols="30" rows="10"
-                            placeholder="Deskripsikan dirimu"></textarea>
+                            placeholder="Deskripsikan dirimu" maxlength="300"></textarea>
                 </div>
             </div>
             <!-- riwayat pendidikan -->
