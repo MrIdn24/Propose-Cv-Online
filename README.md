@@ -1,7 +1,11 @@
-<b>Tips!</b> Kalo tidak bisa <i>php artisan serve</i> coba install laravel snappy dulu <br>
+## Tips!
+* Kalau tidak bisa <i>php artisan serve</i> coba install laravel snappy dulu <br>
 ```bash
 composer require barryvdh/laravel-snappy
 ```
+* Kalau print PDF tidak bisa / eror silahkan install wkhtmltopdf <a href="https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.msvc2015-win64.exe">disini
+
+
 
 ## Cara Install
 
