@@ -3,6 +3,27 @@
 composer require barryvdh/laravel-snappy
 ```
 
+## Cara Install
+
+* Clone dulu di github desktop
+* Lalu ubah file _.env.example_ menjadi _.env_ dan bikin database baru dengsn nama cvonline
+* Lalu buka termimal dan ketik :
+```bash
+composer require barryvdh/laravel-snappy
+```
+* Setelah itu ketik lagi 
+```bash 
+php artisan key:generate 
+```
+* Setelah itu baru kita migrate
+```bash 
+php artisan migrate:fresh 
+```
+* Terakhir kita jalankan  
+```bash 
+php artisan serve 
+```
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
