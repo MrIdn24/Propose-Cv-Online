@@ -9,10 +9,10 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
                 @yield('active')
                 <li class="nav-item">
-                    <a class="nav-link me-5" href="#">Apa itu Propose</a>
+                    <a class="nav-link me-5" href="#aboutme">Apa itu Propose</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cara buat CV</a>
+                    <a class="nav-link" href="#howto">Cara buat CV</a>
                 </li>
             </ul>
             <form class="d-flex">

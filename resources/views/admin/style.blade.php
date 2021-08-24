@@ -432,4 +432,50 @@ footer a {
     border: 3px solid rgb(112, 112, 112);
 }
 
+/* checkout */
+#checkout {
+    margin-top: 100px;
+    /* margin-bottom: 100px; */
+}
+
+#checkout h1 {
+    font-size: 25px;
+}
+
+#checkout .text p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #ADADAD;
+}
+
+#checkout .foto {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#checkout .foto img {
+    max-height: 300px;
+}
+
+#checkout .foto li {
+    font-size: 18px;
+    /* font-weight: 5   00; */
+}
+
+@media (min-width: 992px) {
+    #checkout .text h1 {
+        font-size: 40px;
+    }
+
+    #checkout .text p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #ADADAD;
+    }
+
+    #checkout .foto {
+        width: 65%;
+    }
+}
+
 </style>
