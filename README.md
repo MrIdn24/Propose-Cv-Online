@@ -9,7 +9,7 @@ composer require barryvdh/laravel-snappy
 * Lalu ubah file _.env.example_ menjadi _.env_ dan bikin database baru dengsn nama cvonline
 * Lalu buka termimal dan ketik :
 ```bash
-composer require barryvdh/laravel-snappy
+composer install laravel
 ```
 * Setelah itu ketik lagi 
 ```bash 
