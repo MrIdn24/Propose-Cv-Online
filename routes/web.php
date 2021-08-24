@@ -21,6 +21,7 @@ use App\Http\Controllers\HomeController;
 // });
 
 Route::get('/index', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 // Route::get('/template-flat', function () {
 //     return view('template.templateflat');
 // });

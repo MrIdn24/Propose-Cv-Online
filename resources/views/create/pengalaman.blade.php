@@ -320,6 +320,12 @@
     </li>
 @endsection
 
+@section('about')
+<li class="nav-item">
+    <a class="nav-link " aria-current="page" href="{{route('about')}}">Tentang Kami</a>
+</li>
+@endsection
+
 @push('script')
 
     <script>

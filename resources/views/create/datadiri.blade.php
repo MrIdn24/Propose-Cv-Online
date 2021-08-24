@@ -110,3 +110,8 @@
         <a class="nav-link me-5" aria-current="page" href="{{ route('home') }}">Home</a>
     </li>
 @endsection
+@section('about')
+<li class="nav-item">
+    <a class="nav-link" aria-current="page" href="{{route('about')}}">Tentang Kami</a>
+</li>
+@endsection

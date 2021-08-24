@@ -478,4 +478,77 @@ footer a {
     }
 }
 
+/* bagian homepage.about */
+/* home */
+#home{
+    padding-top: 300px;
+    background-image: url('images/about/bg.jpg');
+    background-size: cover;
+    height: 650px;
+}
+
+/* tentang kami */
+#tentang-kami{
+    margin-top: 100px;
+    /* box-sizing: border-box; */
+}
+#tentang-kami .card{
+    /* border-radius: 30px; */
+    /* padding: 30px 20px ; */
+    border: none;
+}
+#tentang-kami .card h2{
+    /* font-family: 'Times New Roman',
+    Times,
+    serif; */
+    font-weight: bold;
+}
+#tentang-kami .card p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #848484;
+     text-align: justify;
+     text-indent: 50px;
+}
+@media (min-width: 992px) {
+    #tentang-kami .card {
+        width: 75%;
+    }
+}
+
+/* keterangan-kami */
+#keterangan-kami{
+    margin-top: 100px;
+}
+#keterangan-kami h4 {
+    letter-spacing:0.15em ;
+}
+#keterangan-kami p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #848484;
+}
+
+/* team */
+#team{
+    margin-top: 70px;
+}
+#team .card{
+    margin-top: 50px;
+    padding: 10px 0;
+}
+#team .card img{
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+    margin-bottom: 10px;
+}
+#team .card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #414141;
+}
+
 </style>

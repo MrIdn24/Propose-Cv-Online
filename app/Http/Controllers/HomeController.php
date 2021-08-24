@@ -11,6 +11,11 @@ class HomeController extends Controller
         return view('homepage.content');
         // return view('create.checkout');
     }
+    public function about()
+    {
+        return view('homepage.about');
+        // return view('create.checkout');
+    }
     public function datadiri()
     {
         return view('create.datadiri');
