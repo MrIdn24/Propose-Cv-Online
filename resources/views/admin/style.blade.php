@@ -301,33 +301,34 @@ header .images img {
 /* FOOTER */
 footer {
     margin-top: 100px;
-    /* background-color: #F7F7F7; */
+    background-color: #5A61D7;
 }
+
 
 footer h5 {
     font-weight: 500;
-    font-size: 22px;
-    color: #5A61D7;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 footer a {
     text-decoration: none;
-    color: #5A61D7;
-    font-size: 16px;
+    color: #ffffff;
+    font-size: 14px;
     font-weight: 300;
 }
 
 @media (min-width: 992px) {
     footer h5 {
         font-weight: 500;
-        font-size: 28px;
-        color: #5A61D7;
+        font-size: 22px;
+        color: #ffffff;
     }
 
     footer a {
         text-decoration: none;
-        color: #5A61D7;
-        font-size: 18px;
+        color: #ffffff;
+        font-size: 16px;
         font-weight: 300;
     }
 
@@ -497,6 +498,7 @@ footer a {
     /* padding: 30px 20px ; */
     border: none;
 }
+
 #tentang-kami .card h2{
     /* font-family: 'Times New Roman',
     Times,
@@ -536,6 +538,8 @@ footer a {
 #team .card{
     margin-top: 50px;
     padding: 10px 0;
+    border-radius: 20px;
+    /* border: 1px solid; */
 }
 #team .card img{
     height: 200px;
@@ -546,6 +550,11 @@ footer a {
     margin-bottom: 10px;
 }
 #team .card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #848484;
+}
+#team .card p span {
     font-size: 14px;
     font-weight: 300;
     color: #414141;

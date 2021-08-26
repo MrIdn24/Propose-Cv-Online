@@ -185,7 +185,7 @@
         .right .identitas .text {
             font-weight: 600;
             margin-top: 5px;
-            font-size: 24px;
+            font-size: 20px;
             text-transform: capitalize;
         }
 
