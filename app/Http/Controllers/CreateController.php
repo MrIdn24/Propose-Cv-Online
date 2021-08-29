@@ -238,4 +238,10 @@ class CreateController extends Controller
         $data2 = Pengalaman::all();
         return view('template.template-4',compact('data1','data2'));
     }
+    public function template_5()
+    {
+        $data1 = Datadiri::all();
+        $data2 = Pengalaman::all();
+        return view('template.template-5',compact('data1','data2'));
+    }
 }

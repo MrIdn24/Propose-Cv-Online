@@ -28,7 +28,7 @@
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Tentang Saya</h4>
                         <label for="exampleInputPassword1" class="form-label">Deskripsi Diri</label>
                         <textarea class="form-control" name="deksripsi" id="" cols="30" rows="10"
-                            placeholder="Deskripsikan dirimu" maxlength="300"></textarea>
+                            placeholder="max 300" maxlength="300"></textarea>
                 </div>
             </div>
             <!-- riwayat pendidikan -->
@@ -156,7 +156,7 @@
                 <div class="container">
                     <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Skill</h4>
                     <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                        <strong>Tips! </strong>Maksimal skill 4 untuk tampilan Cv lebih bagus
+                        <strong>Tips! </strong>Maksimal skill 3 untuk tampilan Cv lebih bagus
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <div class="row">
