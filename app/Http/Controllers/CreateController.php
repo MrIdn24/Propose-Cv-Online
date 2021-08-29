@@ -232,4 +232,10 @@ class CreateController extends Controller
         $pdf = PDF::loadView('template.template-3', compact('data1', 'data2'))->setPaper('a4');
         return $pdf->download('template-3.pdf');
     }
+    public function template_4()
+    {
+        $data1 = Datadiri::all();
+        $data2 = Pengalaman::all();
+        return view('template.template-4',compact('data1','data2'));
+    }
 }

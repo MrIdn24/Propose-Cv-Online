@@ -50,7 +50,7 @@
         }
 
         .left .contact h1 {
-            font-size: 40px;
+            font-size: 30px;
             font-weight: normal;
             text-align: center;
             padding: 15px;
@@ -59,7 +59,7 @@
         }
 
         .left .contact .bulet {
-            padding: 10px 20px;
+            padding: 5px 15px;
             /* width: 50px;
         height: 50px; */
             border-radius: 50%;
@@ -68,10 +68,10 @@
         }
 
         .left .contact .text {
-            font-size: 30px;
+            font-size: 22px;
             position: relative;
-            top: 8px;
-            left: 30px;
+            top: 3px;
+            left: 20px;
             
         }
 
@@ -81,7 +81,7 @@
         }
 
         .left .skill h1 {
-            font-size: 40px;
+            font-size: 30px;
             font-weight: normal;
             text-align: center;
             padding: 15px;
@@ -91,6 +91,7 @@
 
         .left .skill h2 {
             /* font-size: 16px; */
+            font-size: 22px;
             font-weight: 300;
             text-transform: uppercase;
         }
@@ -121,7 +122,7 @@
         }
 
         .left .hobi h1 {
-            font-size: 40px;
+            font-size: 30px;
             font-weight: normal;
             text-align: center;
             padding: 15px;
@@ -139,7 +140,7 @@
         }
 
         .left .hobi .text {
-            font-size: 30px;
+            font-size: 22px;
             position: relative;
             top: 8px;
             left: 30px;
@@ -168,7 +169,7 @@
 
         .right .head h1 {
             margin: 0px;
-            font-size: 30px;
+            font-size: 22px;
             text-transform: uppercase;
             text-align: center;
             color: #fff;
@@ -183,13 +184,13 @@
 
         /* profile */
         .right .content .profile h1 {
-            font-size: 40px;
+            font-size: 30px;
             margin: 0;
             color: #F1393D;
         }
 
         .right .content .profile p {
-            font-size: 30px;
+            font-size: 22px;
             /* font-size: normal; */
             margin-top: 20px;
             text-align: justify;
@@ -202,13 +203,13 @@
         }
 
         .right .content .education h1 {
-            font-size: 40px;
+            font-size: 30px;
             margin: 0;
             color: #F1393D;
         }
 
         .right .content .education p {
-            font-size: 30px;
+            font-size: 22px;
             text-transform: uppercase;
             margin: 0 0 10px 0;
 
@@ -226,16 +227,23 @@
 
             <div class="contact">
                 <h1>Data pribadi</h1>
-                <p style="padding-bottom: 20px; text-transform: capitalize;"><span class="bulet"></span><span
-                        class="text">{{ $dat->nama_depan . ' ' . $dat->nama_belakang }}</span>
-                </p>
-                <p style="padding-bottom: 20px; text-transform: capitalize;"><span class="bulet"></span> <span
+                
+                <p style="padding-bottom: 10px; text-transform: capitalize;"><span class="bulet"></span> <span
                         class="text">{{ $dat->tempat_lahir . ', ' . Carbon\Carbon::parse($dat->tanggal_lahir)->isoFormat("D MMMM Y") }}</span>
                 </p>
-                <p style="padding-bottom: 20px;"><span class="bulet"></span> <span
-                        class="text">{{ $dat->no_telp }}</span> </p>
-                <p style="padding-bottom: 20px;"><span class="bulet"></span> <span
+                <p style="padding-bottom: 10px; text-transform: capitalize;"><span class="bulet"></span><span
+                        class="text">{{ $dat->jenis_kelamin }}</span>
+                </p>
+                <p style="padding-bottom: 10px; text-transform: capitalize;"><span class="bulet"></span><span
+                        class="text">{{ $dat->status_perkawinan }}</span>
+                </p>
+                <p style="padding-bottom: 10px;"><span class="bulet"></span> <span
+                        class="text">+ {{ $dat->no_telp }}</span> </p>
+                <p style="padding-bottom: 10px;"><span class="bulet"></span> <span
                         class="text">{{ $dat->email }}</span></p>
+                <p style="padding-bottom: 10px; text-transform: capitalize;"><span class="bulet"></span><span
+                        class="text">{{ $dat->alamat }}</span>
+                </p>
             </div>
             <div class="skill">
                 <h1>Skill</h1>

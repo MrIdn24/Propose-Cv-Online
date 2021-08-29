@@ -366,7 +366,13 @@
                     Jenis Kelamin:<p>{{ $dat->jenis_kelamin}}</p>
                 </div>
                 <div class="text">
-                    no telp:<p>{{ $dat->no_telp}}</p>
+                    Staus Perkawinan:<p>{{ $dat->status_perkawinan}}</p>
+                </div>
+                <div class="text">
+                    No telp:<p>+ {{ $dat->no_telp}}</p>
+                </div>
+                <div class="text" style="text-transform: none">
+                    Email:<p>{{ $dat->email}}</p>
                 </div>
                 <div class="text">
                     Alamat:<p>{{ $dat->alamat}} </p>

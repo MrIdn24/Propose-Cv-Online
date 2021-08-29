@@ -310,16 +310,20 @@
                                 <span style="font-weight: normal;">{{ $dat->jenis_kelamin }}</span>
                             </li>
                             <li>
-                                Alamat : <br>
-                                <span style="font-weight: normal;">{{ $dat->alamat }}</span>
+                                Status Perkawinan : <br>
+                                <span style="font-weight: normal;">{{ $dat->status_perkawinan }}</span>
                             </li>
                             <li>
                                 No Telp/Hp : <br>
-                                <span style="font-weight: normal;">{{ $dat->no_telp }}</span>
+                                <span style="font-weight: normal;">+ {{ $dat->no_telp }}</span>
                             </li>
                             <li>
                                 Email : <br>
                                 <span style="font-weight: normal;">{{ $dat->email }}</span>
+                            </li>
+                            <li>
+                                Alamat : <br>
+                                <span style="font-weight: normal;">{{ $dat->alamat }}</span>
                             </li>
                         </ul>
                     </div>
