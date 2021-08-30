@@ -36,13 +36,35 @@
                             </ul>
                         </div>
                     </div>
+                    @foreach ($data1 as $dat)
+                    @endforeach
                     <div class="col-md-7 ps-5 pe-5 pt-4 pb-4 text-center">
-                        <img src="../images/Group 20.svg" class="shadow" alt="">
+                        @if ($dat->nama_template == 'template-3')
+                            <img src="{{ asset('/images/template/DSTC1.svg') }}" class="shadow" alt="">
+                        @endif
+                        @if ($dat->nama_template == 'template-baru')
+                            <img src="{{ asset('/images/template/DSTC3.svg') }}" class="shadow" alt="">
+                        @endif
+                        @if ($dat->nama_template == 'template-flat')
+                            <img src="{{ asset('/images/template/DSTC2.png') }}" class="shadow" alt="">
+                        @endif
+                        @if ($dat->nama_template == 'template-4')
+                            <img src="{{ asset('/images/template/DSTC5.svg') }}" class="shadow" alt="">
+                        @endif
+                        @if ($dat->nama_template == 'template-5')
+                            <img src="{{ asset('/images/template/DSTC4.svg') }}" class="shadow" alt="">
+                        @endif
                     </div>
                 </div>
             </div>
             <div class="jarak d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="submit" class="btn btn-create pe-5 ps-5 mt-3 "><i class="fa fa-file-pdf"></i> Print PDF</button>
+                <form action="{{ route('create.storecheck') }}" method="post">
+                    @foreach ($data2 as $dats)
+                    @endforeach
+                    @csrf
+                    <input type="text" name="nama_user" id="nama_user" class="d-none" value="{{ $dats->nama_depan ." ".$dats->nama_belakang }}">
+                    <button type="submit" class="btn btn-create pe-5 ps-5 mt-3 "><i class="fa fa-file-pdf"></i> Print PDF</button>
+                </form>
             </div>
         </div>
 

@@ -33,12 +33,16 @@
                     <img class="template" id="mtp3" src="{{ asset('/images/template/DSTC1.svg') }}" width="200px"
                         onclick="pilih(3)">
                 </div>
+                <div class="col-md-4 mt-2">
+                    <img class="template" id="mtp4" src="{{ asset('/images/template/DSTC4.svg') }}" width="200px"
+                        onclick="pilih(4)">
+                </div>
             </div>
             <form action="{{ route('choose-tmp.store') }}" method="post" class="mt-5">
                 @csrf
                 <input type="text" name="nama_template" id="tmp" class="d-none">
                 <div class="jarak d-grid gap-2 d-md-flex justify-content-md-end ">
-                    <button type="submit" class="btn btn-create pe-5 ps-5 "><i class="fa fa-file-pdf"></i> Print PDF</button>
+                    <button type="submit" class="btn btn-create pe-5 ps-5 ">Checkout</button>
                 </div>
             </form>
         </div>
@@ -61,8 +65,10 @@
                 document.getElementById('tmp').value = 'template-baru';
             } else if (a == 2) {
                 document.getElementById('tmp').value = 'template-flat';
-            } else {
+            } else if(a == 3) {
                 document.getElementById('tmp').value = 'template-3';
+            }else{
+                document.getElementById('tmp').value = 'template-5';
             }
 
 
@@ -70,14 +76,22 @@
                 document.getElementById('mtp1').style.border = '3px solid rgb(112, 112, 112)';
                 document.getElementById('mtp2').style.border = 'none';
                 document.getElementById('mtp3').style.border = 'none';
+                document.getElementById('mtp4').style.border = 'none';
             } else if (a == 2) {
                 document.getElementById('mtp2').style.border = '3px solid rgb(112, 112, 112)';
                 document.getElementById('mtp1').style.border = 'none';
                 document.getElementById('mtp3').style.border = 'none';
-            } else {
+                document.getElementById('mtp4').style.border = 'none';
+            } else if(a == 3) {
                 document.getElementById('mtp3').style.border = '3px solid rgb(112, 112, 112)';
                 document.getElementById('mtp2').style.border = 'none';
                 document.getElementById('mtp1').style.border = 'none';
+                document.getElementById('mtp4').style.border = 'none';
+            } else if(a == 4){
+                document.getElementById('mtp4').style.border = '3px solid rgb(112, 112, 112)';
+                document.getElementById('mtp2').style.border = 'none';
+                document.getElementById('mtp1').style.border = 'none';
+                document.getElementById('mtp3').style.border = 'none';
             }
 
         }

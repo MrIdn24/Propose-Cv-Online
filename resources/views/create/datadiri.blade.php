@@ -28,16 +28,16 @@
                         <div class="row mt-2 mt-md-4">
                             <div class="col-12 col-md-4">
                                 <label for="exampleInputPassword1" class="form-label">Masukan Foto</label>
-                                <input type="file" name="foto" class="form-control p-5">
+                                <input type="file" name="foto" class="form-control p-5 @error('foto') is-invalid @enderror">
                             </div>
                             <div class="col-md-8">
                                 <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">Nama Depan</label>
-                                    <input type="text" class="form-control" name="nama_depan" id="exampleInputPassword1">
+                                    <input type="text" class="form-control @error('nama_depan') is-invalid @enderror" name="nama_depan" id="exampleInputPassword1">
                                 </div>
                                 <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">Nama Belakang</label>
-                                    <input type="text" class="form-control" name="nama_belakang" id="exampleInputPassword1">
+                                    <input type="text" class="form-control @error('nama_belakang') is-invalid @enderror" name="nama_belakang" id="exampleInputPassword1">
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="col-6">
                                 <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">Tempat Lahir</label>
-                                    <input type="text" class="form-control" name="tempat_lahir" id="exampleInputPassword1">
+                                    <input type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" name="tempat_lahir" id="exampleInputPassword1">
                                 </div>
                                 <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">Jenis Kelamin</label>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">No Telp</label>
-                                    <input type="text" class="form-control" name="no_telp" id="exampleInputPassword1">
+                                    <input type="text" class="form-control  @error('no_telp') is-invalid @enderror" name="no_telp" id="exampleInputPassword1">
                                 </div>
                                 {{-- <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">Kota</label>
@@ -75,7 +75,7 @@
                             <div class="col-6">
                                 <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
-                                    <input type="date" class="form-control" name="tanggal_lahir" id="exampleInputPassword1">
+                                    <input type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" name="tanggal_lahir" id="exampleInputPassword1">
                                 </div>
                                 {{-- <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Agama</label>
@@ -83,11 +83,11 @@
                                 </div> --}}
                                 <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="email" id="exampleInputPassword1">
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="exampleInputPassword1">
                                 </div>
                                 <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                                    <input type="text" class="form-control" name="alamat"  maxlength="250" placeholder="max 200 " id="exampleInputPassword1">
+                                    <input type="text" class="form-control @error('nama_depan') is-invalid @enderror" name="alamat"  maxlength="250" placeholder="max 200 " id="exampleInputPassword1">
                                 </div>
                                 {{-- <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Negara</label>

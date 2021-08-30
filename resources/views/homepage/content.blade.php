@@ -157,18 +157,18 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="{{asset('images/Group 20.svg')}}" alt="" class="gambar1  mb-4">
+                <div class="card bg-white">
+                    <img src="{{asset('images/template/DSTC1.svg')}}" alt="" class="gambar1  mb-4">
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="{{asset('images/Group 20.svg')}}" alt="" class="gambar1  mb-4">
+                <div class="card bg-white">
+                    <img src="{{asset('images/template/DSTC3.svg')}}" alt="" class="gambar1  mb-4">
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="{{asset('images/Group 20.svg')}}" alt="" class="gambar1  mb-4">
+                <div class="card bg-white">
+                    <img src="{{asset('images/template/DSTC4.svg')}}" alt="" class="gambar1  mb-4">
                 </div>
             </div>
 
@@ -183,7 +183,7 @@
 <section id="penutup">
     <div class="text text-center text-white pt-5 pb-5">
         <div class="container">
-            <h1>Sudah lebih dari 1500 orang menggunakan Propose CV</h1>
+            <h1>Sudah lebih dari {{ $db }} orang menggunakan Propose CV</h1>
             <p>Propose CV solusi dalam membuat CV</p>
             <a href="{{route('datadiri')}}" class="btn btn-mulai pe-5 ps-5 pt-2 pb-2">Buat CV</a>
         </div>

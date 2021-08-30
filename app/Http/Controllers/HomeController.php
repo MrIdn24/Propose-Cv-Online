@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Checkout;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('homepage.content');
-        // return view('create.checkout');
+        $db = Checkout::all()->count('id');
+        return view('homepage.content', compact('db'));
     }
     public function about()
     {

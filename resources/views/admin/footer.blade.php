@@ -6,19 +6,19 @@
                     <div class="col-12 col-lg-4">
                         <h5>Contact</h5>
                         <ul class="list-unstyled">
-                            <li><a href="https://api.whatsapp.com/send?phone=6281213514918&text=Halo%20Admin"><i class="fas fa-phone-alt me-1"></i> +62 812 1351 4918</a></li>
-                            <li><a href=""><i class="fas fa-envelope me-1"></i> rifkiahmadhz@gmail.com</a></li>
-                            <li><a href=""><i class="fas fa-map-marker-alt me-1"></i> Jln. H. Moat RT 05/09 no.16 Kel. Tugu Kec. Cimanggis - Kelapa Dua Depok - jawa barat</a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=6281213514918&text=Halo%20Admin" target="_blan"><i class="fas fa-phone-alt me-1" target="_blank"></i> +62 812 1351 4918</a></li>
+                            <li><a href="" target="_blan"><i class="fas fa-envelope me-1"></i> rifkiahmadhz@gmail.com</a></li>
+                            <li><a href="" target="_blan"><i class="fas fa-map-marker-alt me-1"></i> Jln. H. Moat RT 05/09 no.16 Kel. Tugu Kec. Cimanggis - Kelapa Dua Depok - jawa barat</a></li>
 
                         </ul>
                     </div>
                     <div class="col-12 col-lg-4">
                         <h5>Menu</h5>
                         <ul class="list-unstyled">
-                            <li><a href="">Apa Itu ProposeCV</a></li>
-                            <li><a href="">Template CV</a></li>
-                            <li><a href="">Cara Buat CV</a></li>
-                            <li><a href="{{route('about')}}">Tentang Kami</a></li>
+                            <li><a href="" target="_blan">Apa Itu ProposeCV</a></li>
+                            <li><a href="" target="_blan">Template CV</a></li>
+                            <li><a href="" target="_blan">Cara Buat CV</a></li>
+                            <li><a href="{{route('about')}}" target="_blank">Tentang Kami</a></li>
                             {{-- <li><a href="">Contact</a></li> --}}
                         </ul>
                     </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Checkout;
 use App\Models\Datadiri;
 use App\Models\Pengalaman;
 use App\Models\Template;
@@ -37,6 +38,12 @@ class CreateController extends Controller
     {
         return view('create.chtemplate');
     }
+    public function createcheck()
+    {
+        $data1 = Template::all();
+        $data2 = Datadiri::all();
+        return view('create.checkout', compact('data1', 'data2'));
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -47,21 +54,18 @@ class CreateController extends Controller
     public function storedata(Request $request)
     {
         // dd($request);
-        // $request->validate([
-        //     'foto' => 'required',
-        //     'nama_depan' => 'required',
-        //     'nama_belakang' => 'required',
-        //     'tempat_lahir' => 'required',
-        //     'tanggal_lahir' => 'required',
-        //     'jenis_kelamin' => 'required',
-        //     'agama' => 'required',
-        //     'status_perkawinan' => 'required',
-        //     'email' => 'required',
-        //     'no_telp' => 'required',
-        //     'alamat' => 'required',
-        //     'kota' => 'required',
-        //     'negara' => 'required',
-        // ]);
+        $request->validate([
+            'foto' => 'required',
+            'nama_depan' => 'required',
+            'nama_belakang' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'jenis_kelamin' => 'required',
+            'status_perkawinan' => 'required',
+            'email' => 'required',
+            'no_telp' => 'required',
+            'alamat' => 'required',
+        ]);
 
         $nm = $request->foto;
         $namafile = time() . rand(100, 999) . "." . $nm->getClientOriginalExtension();
@@ -153,16 +157,28 @@ class CreateController extends Controller
         ]);
 
         Template::create($request->all());
-        return redirect()->route('template');
+        return redirect()->route('checkout');
     }
 
-    public function totemplate()
+    public function storecheck(Request $request)
     {
+        $request->validate([
+            'nama_user' => 'required',
+        ]);
+        Checkout::create($request->all());
         $data = Template::all();
         foreach ($data as $dat) {
         }
         return redirect()->route($dat->nama_template);
     }
+
+    // public function totemplate()
+    // {
+    //     $data = Template::all();
+    //     foreach ($data as $dat) {
+    //     }
+    //     return redirect()->route($dat->nama_template);
+    // }
 
     /**
      * Display the specified resource.
@@ -229,19 +245,21 @@ class CreateController extends Controller
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
 
-        $pdf = PDF::loadView('template.template-3', compact('data1', 'data2'))->setPaper('a4');
+        $pdf = PDF::loadView('template.template-3', compact('data1', 'data2'));
         return $pdf->download('template-3.pdf');
     }
     public function template_4()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
-        return view('template.template-4',compact('data1','data2'));
+        $pdf = PDF::loadView('template.template-4', compact('data1', 'data2'))->setPaper('a4');
+        return $pdf->download('template-4.pdf');
     }
     public function template_5()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
-        return view('template.template-5',compact('data1','data2'));
+        $pdf = PDF::loadView('template.template-5', compact('data1', 'data2'))->setPaper('a4');
+        return $pdf->download('template-5.pdf');
     }
 }

@@ -13,7 +13,7 @@ class CreatePengalamenTable extends Migration
      */
     public function up()
     {
-        Schema::create('pengalaman', function (Blueprint $table) {
+        Schema::create('pengalamans', function (Blueprint $table) {
             $table->id();
             // $table->bigInteger('id_datadiris');
             $table->text('deksripsi');
@@ -50,6 +50,6 @@ class CreatePengalamenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pengalaman');
+        Schema::dropIfExists('pengalamans');
     }
 }
