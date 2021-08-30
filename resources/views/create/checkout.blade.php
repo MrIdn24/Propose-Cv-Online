@@ -1,6 +1,6 @@
 @extends('master')
 @section('title')
-    <title>Data diri</title>
+    <title>Checkout</title>
 @endsection
 @section('content')
 
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container mt-5">
             <div class="text text-center">
                 <h1>CV Anda sudah siap!</h1>
                 <p>Silahkan lihat dan donwload secara gratis</p>
