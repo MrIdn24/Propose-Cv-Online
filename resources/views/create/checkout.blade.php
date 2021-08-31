@@ -63,8 +63,13 @@
                     @endforeach
                     @csrf
                     <input type="text" name="nama_user" id="nama_user" class="d-none" value="{{ $dats->nama_depan ." ".$dats->nama_belakang }}">
-                    <button type="submit" class="btn btn-create pe-5 ps-5 mt-3 "><i class="fa fa-file-pdf"></i> Print PDF</button>
+                    <button type="submit" class="btn btn-create p-2 ps-3 pe-3 mt-5" id="print"><i class="fa fa-file-pdf" id="icon"></i> Print PDF</button>
                 </form>
+                <button class="btn btn-create pe-5 ps-5 mt-5 d-none" id="load" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+                </button>
+                <a href="{{ route('home') }}" class="btn btn-create pe-5 ps-5 mt-5 d-none" id="selesai">Selesai</a>
             </div>
         </div>
 
@@ -82,3 +87,20 @@
     <a class="nav-link" aria-current="page" href="{{route('about')}}">Tentang Kami</a>
 </li>
 @endsection
+@push('script')
+    <script>
+        $(document).ready(function () {
+            $('#print').click(function () {
+                $('#print').addClass('d-none');
+                $('#icon').addClass('d-none');
+                $('#load').removeClass('d-none');
+                setTimeout(function(){
+                    $('#load').addClass('d-none');
+                }, 5000);
+                setTimeout(function () {
+                    $('#selesai').removeClass('d-none'); 
+                }, 5000);
+            });
+        });
+    </script>
+@endpush

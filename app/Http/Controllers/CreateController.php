@@ -228,38 +228,50 @@ class CreateController extends Controller
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
+        foreach ($data1 as $dat) {
+        }
 
         $pdf = PDF::loadView('template.template-flat', compact('data1', 'data2'))->setPaper('a4');
-        return $pdf->download('template-flat.pdf');
+        return $pdf->download('CV - ' . $dat->nama_depan . ' ' . $dat->nama_belakang . '.pdf');
     }
     public function template_baru()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
+        foreach ($data1 as $dat) {
+        }
 
         $pdf = PDF::loadView('template.template-baru', compact('data1', 'data2'))->setPaper('a4');
-        return $pdf->download('template-baru.pdf');
+        return $pdf->download('CV - ' . $dat->nama_depan . ' ' . $dat->nama_belakang . '.pdf');
     }
     public function template_3()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
+        foreach ($data1 as $dat) {
+        }
 
         $pdf = PDF::loadView('template.template-3', compact('data1', 'data2'));
-        return $pdf->download('template-3.pdf');
+        return $pdf->download('CV - ' . $dat->nama_depan . ' ' . $dat->nama_belakang . '.pdf');
     }
     public function template_4()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
+        foreach ($data1 as $dat) {
+        }
+
         $pdf = PDF::loadView('template.template-4', compact('data1', 'data2'))->setPaper('a4');
-        return $pdf->download('template-4.pdf');
+        return $pdf->download('CV - ' . $dat->nama_depan . ' ' . $dat->nama_belakang . '.pdf');
     }
     public function template_5()
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
+        foreach ($data1 as $dat) {
+        }
+
         $pdf = PDF::loadView('template.template-5', compact('data1', 'data2'))->setPaper('a4');
-        return $pdf->download('template-5.pdf');
+        return $pdf->download('CV - ' . $dat->nama_depan . ' ' . $dat->nama_belakang . '.pdf');
     }
 }
