@@ -3,7 +3,8 @@
     <title>Checkout</title>
 @endsection
 @section('content')
-
+    @foreach ($data1 as $dat)
+    @endforeach
     <section id="checkout">
         <div class="breadcrumb container w-75 justify-content-evenly">
             <div class="row">
@@ -31,13 +32,13 @@
                         <div class="text">
                             <h3>Keuntungan</h3>
                             <ul>
-                                <li>Free</li>
+                                <li>Free (Syarat & Ketentuan Berlaku)</li>
                                 <li>Dapat diubah kapanpun & dimanapun</li>
+                                <li>Simple dan Praktis</li>
+                                <li>Murah</li>
                             </ul>
                         </div>
                     </div>
-                    @foreach ($data1 as $dat)
-                    @endforeach
                     <div class="col-md-7 ps-5 pe-5 pt-4 pb-4 text-center">
                         @if ($dat->nama_template == 'template-3')
                             <img src="{{ asset('/images/template/DSTC1.svg') }}" class="shadow" alt="">
@@ -65,6 +66,19 @@
                     <input type="text" name="nama_user" id="nama_user" class="d-none" value="{{ $dats->nama_depan ." ".$dats->nama_belakang }}">
                     <button type="submit" class="btn btn-create p-2 ps-3 pe-3 mt-5" id="print"><i class="fa fa-file-pdf" id="icon"></i> Print PDF</button>
                 </form>
+                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                    <img src="{{ asset('images/cvp .02.png') }}" height="40px" width="35px" class="rounded me-2" alt="...">
+                    <strong class="me-auto">Cv Propose</strong>
+                    <small>Now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Cv-mu Sedang Diproses.
+                    </div>
+                </div>
+                </div>
                 <button class="btn btn-create pe-5 ps-5 mt-5 d-none" id="load" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Loading...
@@ -102,5 +116,16 @@
                 }, 5000);
             });
         });
+    </script>
+    <script>
+        var toastTrigger = document.getElementById('print')
+        var toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+        toastTrigger.addEventListener('click', function () {
+            var toast = new bootstrap.Toast(toastLiveExample)
+
+            toast.show()
+        })
+        }
     </script>
 @endpush
