@@ -207,7 +207,8 @@
             padding-top: 30px;
             text-align: justify;
             font-weight: normal;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
             text-transform: capitalize;
         }
 
@@ -234,7 +235,8 @@
             font-size: 17px;
             padding-top: 30px;
             font-weight: normal;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
         }
 
         .box1 {
@@ -276,7 +278,8 @@
             font-size: 17px;
             padding-top: 30px;
             font-weight: normal;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
             text-transform: capitalize;
         }
 
@@ -332,7 +335,8 @@
             font-size: 17px;
             padding-top: 30px;
             font-weight: normal;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
             text-transform: capitalize;
         }
 
@@ -367,20 +371,20 @@
                 </div>
 
                 <div class="profile">
-                    <span class="sp">PROFILE</span>
+                    <span class="sp">TENTANG SAYA</span>
                     <div class="isi-tentang">
                         {{ $dats->deksripsi }}
                     </div>
                 </div>
 
                 <div class="contact">
-                    <span class="sp">CONTACT</span>
+                    <span class="sp">KONTAK</span>
                     <div class="number-contact">
                         <i class="fas fa-envelope a"></i>
                         <span class="isi">{{ $dat->email}}</span>
                         <hr>
                         <i class="fas fa-phone a"></i>
-                        <span class="isi">+{{ $dat->no_telp}}</span>
+                        <span class="isi">+62{{ $dat->no_telp}}</span>
                         <hr>
                         <i class="fas fa-map-marker-alt a"></i>
                         <span class="isi-1">{{ $dat->alamat}}</span>
@@ -394,7 +398,7 @@
     <div class="content">
 
         <div class="tentang-saya">
-            <span class="sp">EDUCATION</span>
+            <span class="sp">RIWAYAT PENDIDIKAN</span>
             <div class="isi-tentang">
                 <div class="box1">
                     <i class="fas fa-stop"></i>
@@ -408,7 +412,7 @@
         </div>
 
         <div class="pengalaman">
-            <span class="sp">WORK EXPERIENCE</span>
+            <span class="sp">RIWAYAT PEKERJAAN</span>
             <div class="isi-pengalaman">
                 <div class="box1">
                     <i class="fas fa-stop"></i>
@@ -424,7 +428,7 @@
         </div>
 
         <div class="skill">
-            <span class="sp">SKILL</span>
+            <span class="sp">KEMAMPUAN</span>
             <div class="isi-skill">
                 <!-- <i class="fas fa-stop box1"></i> -->
                 <div class="box1">
