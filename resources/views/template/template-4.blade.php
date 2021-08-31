@@ -198,7 +198,7 @@
             border: 5px solid;
             background-color: white;
             color: black;
-            padding: 5px 89px 5px 89px;
+            padding: 5px 28px;
         }
 
         .content .tentang-saya .isi-tentang {
@@ -226,7 +226,7 @@
             border: 5px solid;
             background-color: white;
             color: black;
-            padding: 5px 89px 5px 89px;
+            padding: 5px 35px;
         }
 
         .content .pengalaman .isi-pengalaman {
@@ -270,7 +270,7 @@
             border: 5px solid;
             background-color: white;
             color: black;
-            padding: 5px 89px 5px 89px;
+            padding: 5px 86px;
         }
 
         .content .skill .isi-skill {
@@ -327,7 +327,7 @@
             border: 5px solid;
             background-color: white;
             color: black;
-            padding: 5px 89px 5px 89px;
+            padding: 5px 136px;
         }
 
         .content .hobi .hobii {
