@@ -202,3 +202,6 @@
     <a class="nav-link " aria-current="page" href="{{route('about')}}">Tentang Kami</a>
 </li>
 @endsection
+@section('create')
+    <a class="btn btn-create pe-5 ps-5" href="{{route('datadiri')}}">Create</a>
+@endsection

@@ -64,7 +64,7 @@
                     @endforeach
                     @csrf
                     <input type="text" name="nama_user" id="nama_user" class="d-none" value="{{ $dats->nama_depan ." ".$dats->nama_belakang }}">
-                    <button type="submit" class="btn btn-create p-2 ps-4 pe-4 mt-5" id="print"><i class="fa fa-file-pdf" id="icon"></i> Print PDF</button>
+                    <button type="submit" class="btn btn-create p-2 ps-4 pe-4 mt-5" id="print"><i class="fas fa-download" id="icon"></i> Download PDF</button>
                 </form>
                 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
                 <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">

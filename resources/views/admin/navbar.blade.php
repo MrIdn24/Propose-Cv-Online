@@ -9,17 +9,16 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
                 @yield('active')
                 <li class="nav-item">
-                    <a class="nav-link me-5" href="#aboutme">Apa itu Propose</a>
+                    <a class="nav-link me-5" href="{{ route('home').'#aboutme' }}">Apa itu Propose</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-5" href="#howto">Cara buat CV</a>
+                    <a class="nav-link me-5" href="{{ route('home').'#howto' }}">Cara buat CV</a>
                 </li>
                 @yield('about')
             </ul>
-            <form class="d-flex">
-                <a class="btn btn-create pe-5 ps-5" href="{{route('datadiri')}}">Create</a>
-                {{-- <button class="btn btn-create pe-5 ps-5" type="submit">Create</button> --}}
-            </form>
+            <div class="d-flex">
+                @yield('create')
+            </div>
         </div>
     </div>
 </nav>
