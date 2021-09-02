@@ -433,6 +433,55 @@ footer a {
     border: 3px solid rgb(112, 112, 112);
 }
 
+/* template-choose */
+#template-choose {
+    margin-top: 100px;
+    /* margin-bottom: 100px; */
+}
+
+#template-choose h1 {
+    font-size: 25px;
+}
+
+#template-choose .card {
+    margin-bottom: 30px;
+    border: none;
+    background-color: #ffffff;
+    /* padding-bottom: 20px; */
+}
+
+#template-choose .card img {
+    height: 200px;
+    /* width: 150px; */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    /* padding-top: 30px; */
+
+}
+.btn-pilih {
+    background-color: #5A61D7;
+    color: #ffffff;
+    font-size: 16px;
+    /* height: 30px; */
+    font-weight: bold;
+    border-radius: 0 0 5px 5px;
+}
+
+.btn-pilih:hover {
+    background-color: rgba(126, 132, 252, 0.863);
+    color: #ffffff;
+}
+@media (min-width: 992px) {
+    #template-choose .text h1 {
+        font-size: 40px;
+    }
+
+    #template-choose .text p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #ADADAD;
+    }
+}
 /* checkout */
 #checkout {
     margin-top: 100px;

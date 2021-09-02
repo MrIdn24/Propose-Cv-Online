@@ -31,79 +31,7 @@
                             placeholder="max 300" maxlength="300"></textarea>
                 </div>
             </div>
-            <!-- riwayat pendidikan -->
-            <div class="card shadow mb-4 ">
-                <div class="container">
-                    <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Riwayat Pendidikan</h4>
-                    <div class="row mb-4">
-                        <div class="col-6 mb-3">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Nama Instansi</label>
-                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
-                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div>
-                        <div class="col-6 mb-3">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
-                                        Kota, Negara )</i></label>
-                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
-                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div>
-                        {{-- <hr> --}}
-                        {{-- <div class="col-6 mt-3 mb-4">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">SMP</label>
-                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
-                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div>
-                        <div class="col-6 mt-3 mb-4">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
-                                        Kota, Negara )</i></label>
-                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-2 ">
-                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
-                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="col-6 mt-3">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">SMK</label>
-                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
-                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div>
-                        <div class="col-6 mt-3">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
-                                        Kota, Negara )</i></label>
-                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-2 ">
-                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
-                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div> --}}
-                    </div>
-                </div>
-            </div>
+            
             {{-- hobi --}}
             <div class="card shadow mb-4">
                 <div class="container" id="dynamic_field">
@@ -267,6 +195,80 @@
                         </div>
                 </div>
             </div> --}}
+
+            <!-- riwayat pendidikan -->
+            <div class="card shadow mb-4 ">
+                <div class="container">
+                    <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Riwayat Pendidikan</h4>
+                    <div class="row mb-4">
+                        <div class="col-6 mb-3">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Nama Instansi</label>
+                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
+                                        Kota, Negara )</i></label>
+                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                        {{-- <hr> --}}
+                        {{-- <div class="col-6 mt-3 mb-4">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">SMP</label>
+                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-3 mb-4">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
+                                        Kota, Negara )</i></label>
+                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-2 ">
+                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col-6 mt-3">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">SMK</label>
+                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
+                                        Kota, Negara )</i></label>
+                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-2 ">
+                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div> --}}
+                    </div>
+                </div>
+            </div>
             <!-- pengalaman kerja -->
             <div class="card shadow mb-4">
                 <div class="container">

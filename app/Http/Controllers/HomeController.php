@@ -29,4 +29,8 @@ class HomeController extends Controller
     {
         return view('create.chtemplate');
     }
+    public function chose_template()
+    {
+        return view('create.chose-template');
+    }
 }
