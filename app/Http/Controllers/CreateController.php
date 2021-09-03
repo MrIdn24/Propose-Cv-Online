@@ -147,7 +147,8 @@ class CreateController extends Controller
         //     'hobi4' => "$request->hobi4"
         // ]);
         // Pengalaman::create($request->all());
-        return redirect()->route('choose-tmp');
+        return redirect()->route('chose-template');
+        // return redirect()->route('choose-tmp');
     }
 
     public function storetmp(Request $request)

@@ -116,7 +116,7 @@
             border: 5px solid;
             background-color: #2980b9;
             color: white;
-            padding: 5px 100px 5px 100px;
+            padding: 5px 53px;
         }
 
         .side .profile .isi-tentang {
@@ -140,7 +140,7 @@
             border: 5px solid;
             background-color: #2980b9;
             color: white;
-            padding: 5px 89px 5px 89px;
+            padding: 5px 95px;
         }
 
         .side .contact .number-contact {
@@ -181,12 +181,13 @@
             left: 300px;
             width: 710px;
             z-index: 999;
-            top: -90px;
+            top: 5px;
+            /* margin-top: 30px; */
         }
 
 
         .content .tentang-saya {
-            margin-top: 150px;
+            margin-top: 40px;
             margin-left: 150px;
             font-size: 24px;
             font-weight: bold;

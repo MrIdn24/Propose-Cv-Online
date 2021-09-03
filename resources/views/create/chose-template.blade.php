@@ -28,33 +28,33 @@
             <div class="row mt-5">
                 <!-- <h3 class="text-center mb-5">Flat Template</h3> -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card shadow">
+                    <div class="card shadow" id="mtp1">
                         <img src="{{ asset('/images/template/DSTC3.svg') }}" alt="" class="mb-4 mt-4">
-                        <button class="btn btn-pilih">Pilih</button>
+                        <button class="btn btn-pilih" onclick="pilih(1)">Pilih</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card shadow">
+                    <div class="card shadow" id="mtp2">
                         <img src="{{ asset('/images/template/DSTC2.png') }}" alt="" class="mb-4 mt-4">
-                        <button class="btn btn-pilih">Pilih</button>
+                        <button class="btn btn-pilih" onclick="pilih(2)">Pilih</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card shadow">
+                    <div class="card shadow" id="mtp3">
                         <img src="{{ asset('/images/template/DSTC1.svg') }}" alt="" class="mb-4 mt-4">
-                        <button class="btn btn-pilih">Pilih</button>
+                        <button class="btn btn-pilih" onclick="pilih(3)">Pilih</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card shadow">
+                    <div class="card shadow" id="mtp4">
                         <img src="{{ asset('/images/template/DSTC4.svg') }}" alt="" class="mb-4 mt-4">
-                        <button class="btn btn-pilih">Pilih</button>
+                        <button class="btn btn-pilih" onclick="pilih(4)">Pilih</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card shadow">
+                    <div class="card shadow" id="mtp5">
                         <img src="{{ asset('/images/template/DSTC5.svg') }}" alt="" class="mb-4 mt-4">
-                        <button class="btn btn-pilih">Pilih</button>
+                        <button class="btn btn-pilih" onclick="pilih(5)">Pilih</button>
                     </div>
                 </div>
                 <form action="{{ route('choose-tmp.store') }}" method="post" class="mt-5">
@@ -85,3 +85,54 @@
         <a class="nav-link " aria-current="page" href="{{ route('about') }}">Tentang Kami</a>
     </li>
 @endsection
+@push('script')
+    <script>
+        function pilih(a) {
+            if (a == 1) {
+                document.getElementById('tmp').value = 'template-baru';
+            } else if (a == 2) {
+                document.getElementById('tmp').value = 'template-flat';
+            } else if(a == 3) {
+                document.getElementById('tmp').value = 'template-3';
+            }else if(a == 4){
+                document.getElementById('tmp').value = 'template-5';
+            }else if(a == 5){
+                document.getElementById('tmp').value = 'template-4';
+            }
+
+
+            if (a == 1) {
+                document.getElementById('mtp1').style.border = '3px solid rgba(126, 132, 252, 0.966)';
+                document.getElementById('mtp2').style.border = 'none';
+                document.getElementById('mtp3').style.border = 'none';
+                document.getElementById('mtp4').style.border = 'none';
+                document.getElementById('mtp5').style.border = 'none';
+            } else if (a == 2) {
+                document.getElementById('mtp2').style.border = '3px solid rgba(126, 132, 252, 0.966)';
+                document.getElementById('mtp1').style.border = 'none';
+                document.getElementById('mtp3').style.border = 'none';
+                document.getElementById('mtp4').style.border = 'none';
+                document.getElementById('mtp5').style.border = 'none';
+            } else if(a == 3) {
+                document.getElementById('mtp3').style.border = '3px solid rgba(126, 132, 252, 0.966)';
+                document.getElementById('mtp2').style.border = 'none';
+                document.getElementById('mtp1').style.border = 'none';
+                document.getElementById('mtp4').style.border = 'none';
+                document.getElementById('mtp5').style.border = 'none';
+            } else if(a == 4){
+                document.getElementById('mtp4').style.border = '3px solid rgba(126, 132, 252, 0.966)';
+                document.getElementById('mtp2').style.border = 'none';
+                document.getElementById('mtp1').style.border = 'none';
+                document.getElementById('mtp3').style.border = 'none';
+                document.getElementById('mtp5').style.border = 'none';
+            } else if(a == 5){
+                document.getElementById('mtp5').style.border = '3px solid rgba(126, 132, 252, 0.966)';
+                document.getElementById('mtp2').style.border = 'none';
+                document.getElementById('mtp1').style.border = 'none';
+                document.getElementById('mtp3').style.border = 'none';
+                document.getElementById('mtp4').style.border = 'none';
+            }
+
+        }
+    </script>
+@endpush

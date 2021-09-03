@@ -60,7 +60,7 @@
                                     <select class="form-select" name="status_perkawinan" aria-label="Default select example">
                                         <option selected>Pilih Satu</option>
                                         <option value="Sudah">Sudah</option>
-                                        <option value="Perempuan">Belum</option>
+                                        <option value="Belum">Belum</option>
                                     </select>
                                 </div>
                                 <div class="mb-2">
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                                    <input type="text" class="form-control @error('nama_depan') is-invalid @enderror" name="alamat"  maxlength="250" placeholder="max 200 " id="exampleInputPassword1">
+                                    <input type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat"  maxlength="250" placeholder="max 200 " id="exampleInputPassword1">
                                 </div>
                                 {{-- <div class="mb-2 ">
                                     <label for="exampleInputPassword1" class="form-label">Negara</label>
