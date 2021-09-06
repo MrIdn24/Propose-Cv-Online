@@ -274,7 +274,7 @@
                 <div class="container">
                     <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Pengalaman Kerja</h4>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 mb-4">
                             <div class="mb-2">
                                 <label for="exampleInputPassword1" class="form-label">Jabatan</label>
                                 <input type="text" name="jabatan" class="form-control" id="exampleInputPassword1">
@@ -283,8 +283,9 @@
                                 <label for="exampleInputPassword1" class="form-label">Mulai</label>
                                 <input type="date" name="mulai_kerja" class="form-control" id="exampleInputPassword1">
                             </div>
+                            <i id="tbhkerja1" class="fas fa-plus btn-primary p-2"></i>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 mb-4">
                             <div class="mb-2">
                                 <label for="exampleInputPassword1" class="form-label">Perusahaan <i class="fw-light">(
                                         Tulis: Nama, Kota )</i></label>
@@ -293,6 +294,57 @@
                             <div class="mb-2 ">
                                 <label for="exampleInputPassword1" class="form-label">Selesai</label>
                                 <input type="date" name="selesai_kerja" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        </div>
+                        <div class="row d-none kerja-1">
+                            <hr>
+                            <div class="col-6 mb-4">
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Jabatan</label>
+                                    <input type="text" name="jabatan2" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                    <input type="date" name="mulai_kerja2" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <i id="tbhkerja2" class="fas fa-plus btn-primary p-2 d-none"></i>
+                                <i id="krgkerja1" class="fas fa-minus btn-danger p-2 d-none"></i>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Perusahaan <i class="fw-light">(
+                                            Tulis: Nama, Kota )</i></label>
+                                    <input type="text" name="perusahaan2" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-2 ">
+                                    <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                    <input type="date" name="selesai_kerja2" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-none kerja-2">
+                            <hr>
+                            <div class="col-6 mb-4">
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Jabatan</label>
+                                    <input type="text" name="jabatan3" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                    <input type="date" name="mulai_kerja3" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <i id="tbhkerja3" class="fas fa-minus btn-danger p-2 d-none"></i>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Perusahaan <i class="fw-light">(
+                                            Tulis: Nama, Kota )</i></label>
+                                    <input type="text" name="perusahaan3" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-2 ">
+                                    <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                    <input type="date" name="selesai_kerja3" class="form-control" id="exampleInputPassword1">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -356,6 +408,7 @@
             function hapus1() {
                 
                 $('#hobi2').addClass('d-none');
+                $('#hobi2').val('');
                 $('#tambah1').removeClass('d-none');
                 $('#hapus1').addClass('d-none');
                 $('#tambah2').addClass('d-none');
@@ -371,6 +424,7 @@
             }
             function hapus2() {
                 $('#hobi3').addClass('d-none');
+                $('#hobi3').val('');
                 $('#tambah2').removeClass('d-none');
                 $('#hapus2').addClass('d-none');
                 $('#tambah3').addClass('d-none');
@@ -386,6 +440,7 @@
             }
             function hapus3() {
                 $('#hobi4').addClass('d-none');
+                $('#hobi4').val('');
                 $('#tambah3').removeClass('d-none');
                 $('#hapus3').addClass('d-none');
                 $('#hapus2').removeClass('d-none');
@@ -426,6 +481,9 @@
             }
             function hapusS1() {
                 $('#tbhs1').removeClass('d-none');
+                $('#skill2').val('');
+                $('#skillps2').val(0);
+                $('#volume2').val('');
                 $('#hps1').addClass('d-none');
                 $('#skill2').addClass('d-none');
                 $('#skillps2').addClass('d-none');
@@ -446,6 +504,9 @@
                 $('#skill3').addClass('d-none');
                 $('#skillps3').addClass('d-none');
                 $('#hps1').removeClass('d-none');
+                $('#skill3').val('');
+                $('#skillps3').val(0);
+                $('#volume3').val('');
             }
 
             $('#tbhs1').click(function () {
@@ -465,7 +526,44 @@
             });
 
             // AKhir Skill
-            
+
+            // Awal Kerja
+
+            $('#tbhkerja1').click(function () {
+                $('.kerja-1').removeClass('d-none');
+                $('#tbhkerja2').removeClass('d-none');
+                $('#tbhkerja1').addClass('d-none');
+                $('#krgkerja1').removeClass('d-none');
+            });
+            $('#tbhkerja2').click(function () {
+                $('.kerja-2').removeClass('d-none');
+                $('#tbhkerja2').addClass('d-none');
+                $('#tbhkerja3').removeClass('d-none');
+                $('#krgkerja1').addClass('d-none');
+            });
+            $('#tbhkerja3').click(function () {
+                $('.kerja-2').addClass('d-none');
+                $('#tbhkerja2').removeClass('d-none');
+                $('#tbhkerja3').addClass('d-none');
+                $('#krgkerja1').removeClass('d-none');
+                // hapus value
+                $('input[name="jabatan3"]').val('');
+                $('input[name="perusahaan3"]').val('');
+                $('input[name="mulai_kerja3"]').val('');
+                $('input[name="selesai_kerja3"]').val('');
+            });
+            $('#krgkerja1').click(function () {
+                $('.kerja-1').addClass('d-none');
+                $('#tbhkerja1').removeClass('d-none');
+                $('#krgkerja1').removeClass('d-none');
+                // hapus value
+                $('input[name="jabatan2"]').val('');
+                $('input[name="perusahaan2"]').val('');
+                $('input[name="mulai_kerja2"]').val('');
+                $('input[name="selesai_kerja2"]').val('');
+            });
+
+            // Akhir Kerja
         })
     </script>
 

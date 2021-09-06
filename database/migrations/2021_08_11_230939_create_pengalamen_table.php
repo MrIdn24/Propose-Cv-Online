@@ -39,6 +39,14 @@ class CreatePengalamenTable extends Migration
             $table->string('perusahaan');
             $table->date('mulai_kerja');
             $table->date('selesai_kerja');
+            $table->string('jabatan2')->nullable();
+            $table->string('perusahaan2')->nullable();
+            $table->date('mulai_kerja2')->nullable();
+            $table->date('selesai_kerja2')->nullable();
+            $table->string('jabatan3')->nullable();
+            $table->string('perusahaan3')->nullable();
+            $table->date('mulai_kerja3')->nullable();
+            $table->date('selesai_kerja3')->nullable();
             $table->timestamps();
         });
     }
