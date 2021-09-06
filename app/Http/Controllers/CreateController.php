@@ -18,7 +18,7 @@ class CreateController extends Controller
      */
     public function index()
     {
-        //
+        // 
     }
 
     /**
@@ -110,26 +110,42 @@ class CreateController extends Controller
         // dd($request);
 
         $dtUpload = new Pengalaman;
+        // deskripsi
         $dtUpload->deksripsi = $request->deksripsi;
+        // pendidikan
         $dtUpload->nama_instansi = $request->nama_instansi;
         $dtUpload->kota_instansi = $request->kota_instansi;
         $dtUpload->mulai_belajar = $request->mulai_belajar;
         $dtUpload->selesai_belajar = $request->selesai_belajar;
-        // $dtUpload->nama_org = $request->nama_org;
-        // $dtUpload->mulai_org = $request->mulai_org;
-        // $dtUpload->selesai_org = $request->selesai_org;
-        // $dtUpload->prestasi = $request->prestasi;
-        // $dtUpload->bulantahun = $request->bulantahun;
+        $dtUpload->nama_instansi2 = $request->nama_instansi2;
+        $dtUpload->kota_instansi2 = $request->kota_instansi2;
+        $dtUpload->mulai_belajar2 = $request->mulai_belajar2;
+        $dtUpload->selesai_belajar2 = $request->selesai_belajar2;
+        $dtUpload->nama_instansi3 = $request->nama_instansi3;
+        $dtUpload->kota_instansi3 = $request->kota_instansi3;
+        $dtUpload->mulai_belajar3 = $request->mulai_belajar3;
+        $dtUpload->selesai_belajar3 = $request->selesai_belajar3;
+        // Pekerjaan
         $dtUpload->jabatan = $request->jabatan;
         $dtUpload->perusahaan = $request->perusahaan;
         $dtUpload->mulai_kerja = $request->mulai_kerja;
         $dtUpload->selesai_kerja = $request->selesai_kerja;
+        $dtUpload->jabatan2 = $request->jabatan2;
+        $dtUpload->perusahaan2 = $request->perusahaan2;
+        $dtUpload->mulai_kerja2 = $request->mulai_kerja2;
+        $dtUpload->selesai_kerja2 = $request->selesai_kerja2;
+        $dtUpload->jabatan3 = $request->jabatan3;
+        $dtUpload->perusahaan3 = $request->perusahaan3;
+        $dtUpload->mulai_kerja3 = $request->mulai_kerja3;
+        $dtUpload->selesai_kerja3 = $request->selesai_kerja3;
+        // Skill
         $dtUpload->skill = $request->skill;
         $dtUpload->skill_persen = $request->skill_persen;
         $dtUpload->skill2 = $request->skill2;
         $dtUpload->skill_persen2 = $request->skill_persen2;
         $dtUpload->skill3 = $request->skill3;
         $dtUpload->skill_persen3 = $request->skill_persen3;
+        // hobi
         $dtUpload->hobi = $request->hobi;
         $dtUpload->hobi2 = $request->hobi2;
         $dtUpload->hobi3 = $request->hobi3;

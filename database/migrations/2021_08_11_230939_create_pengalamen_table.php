@@ -21,6 +21,14 @@ class CreatePengalamenTable extends Migration
             $table->string('kota_instansi');
             $table->date('mulai_belajar');
             $table->date('selesai_belajar');
+            $table->string('nama_instansi2')->nullable();
+            $table->string('kota_instansi2')->nullable();
+            $table->date('mulai_belajar2')->nullable();
+            $table->date('selesai_belajar2')->nullable();
+            $table->string('nama_instansi3')->nullable();
+            $table->string('kota_instansi3')->nullable();
+            $table->date('mulai_belajar3')->nullable();
+            $table->date('selesai_belajar3')->nullable();
             $table->string('hobi');
             $table->string('hobi2')->nullable();
             $table->string('hobi3')->nullable();

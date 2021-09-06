@@ -47,30 +47,30 @@
                                         class="fw-light">( Olahraga / Bermain Musik )</i> </label>
                                 <input type="text" name="hobi" class="form-control mb-4" id="hobi">
                                 <div class="row">
+                                    <div class="col-md-1">
+                                        <i id="tambah1" class="fa fa-plus fs-6 text-right btn-primary p-2 mt-1 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Hobi"></i>
+                                        <i id="hapus1" class="fa fa-minus fs-6 text-right btn-danger p-2 mt-1 me-3 d-none"></i>
+                                    </div>
                                     <div class="col-md-11">
                                         <input type="text" name="hobi2" class="form-control mb-4 d-none" id="hobi2">
                                     </div>
-                                    <div class="col-md-1">
-                                        <i id="tambah1" class="fa fa-plus fs-6 text-right btn-primary p-1 mt-2 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Hobi"></i>
-                                        <i id="hapus1" class="fa fa-minus fs-6 text-right btn-danger p-1 mt-2 me-3 d-none"></i>
-                                    </div>
                                 </div>
                                 <div class="row">
+                                    <div class="col-md-1">
+                                        <i id="tambah2" class="fa fa-plus d-none fs-6 text-right btn-primary p-2 mt-1 me-3"data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Hobi"></i>
+                                        <i id="hapus2" class="fa fa-minus fs-6 text-right btn-danger p-2 mt-1 me-3 d-none"></i>
+                                    </div>
                                     <div class="col-md-11">
                                         <input type="text" name="hobi3" class="form-control mb-4 d-none" id="hobi3">
                                     </div>
-                                    <div class="col-md-1">
-                                        <i id="tambah2" class="fa fa-plus d-none fs-6 text-right btn-primary p-1 mt-2 me-3"data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Hobi"></i>
-                                        <i id="hapus2" class="fa fa-minus fs-6 text-right btn-danger p-1 mt-2 me-3 d-none"></i>
-                                    </div>
                                 </div>
                                 <div class="row">
+                                    <div class="col-md-1">
+                                        <i id="tambah3" class="fa fa-plus d-none fs-6 text-right btn-primary p-2 mt-1 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Hobi"></i>
+                                        <i id="hapus3" class="fa fa-minus fs-6 text-right btn-danger p-2 mt-1 me-3 d-none"></i>
+                                    </div>
                                     <div class="col-md-11">
                                         <input type="text" name="hobi4" class="form-control mb-4 d-none" id="hobi4">
-                                    </div>
-                                    <div class="col-md-1">
-                                        <i id="tambah3" class="fa fa-plus d-none fs-6 text-right btn-primary p-1 mt-2 me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Hobi"></i>
-                                        <i id="hapus3" class="fa fa-minus fs-6 text-right btn-danger p-1 mt-2 me-3 d-none"></i>
                                     </div>
                                 </div>
                             </div>
@@ -90,8 +90,8 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="mb-4">
-                                <label for="exampleInputPassword1" class="form-label">Keahlian Khusus <i class="fw-light">(
-                                        Menggambar / Adobe Primer )</i> </label>
+                                <label for="exampleInputPassword1" class="form-label">Keahlian Khusus <i class="fw-light fs-6">(
+                                        Hobi )</i> </label>
                                 <input type="text" name="skill" class="form-control" id="exampleInputPassword1">
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                         <div class="col-6">
                             <div class="mb-1">
                                 <output id="volume2" class="pl-5 volume" style="position: relative; top: -10px; left: 50%;"></output>
-                                <input type="range" name="skill_persen2" value="0" class="form-range pb-5 d-none"
+                                <input type="range" name="skill_persen2" value="0" class="form-range pb-3 d-none"
                                     id="skillps2" oninput="nilai2(value)">
                             </div>
                         </div>
@@ -137,8 +137,8 @@
                         </div>
                         <div class="col-6">
                             <div class="mb-1">
-                                <output id="volume3" class="pl-5 volume" style="position: relative; top: 10px; left: 50%;"></output>
-                                <input type="range" name="skill_persen3" value="0" class="form-range pb-5 d-none"
+                                <output id="volume3" class="pl-5 volume" style="position: relative; top: -10px; left: 50%;"></output>
+                                <input type="range" name="skill_persen3" value="0" class="form-range pb-3 d-none"
                                     id="skillps3" oninput="nilai3(value)">
                             </div>
                         </div>
@@ -210,6 +210,7 @@
                                 <label for="exampleInputPassword1" class="form-label">Mulai</label>
                                 <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
                             </div>
+                            <i id="tbhpendidikan1" class="fas fa-plus btn-primary p-2"></i>
                         </div>
                         <div class="col-6 mb-3">
                             <div class="mb-2">
@@ -222,50 +223,57 @@
                                 <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
                             </div>
                         </div>
-                        {{-- <hr> --}}
-                        {{-- <div class="col-6 mt-3 mb-4">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">SMP</label>
-                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
+                        <div class="row d-none pendidikan-1">
+                            <hr>
+                            <div class="col-6 mb-4">
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Nama Instansi</label>
+                                    <input type="text" name="nama_instansi2" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                    <input type="date" name="mulai_belajar2" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <i id="tbhpendidikan2" class="fas fa-plus btn-primary p-2 d-none"></i>
+                                <i id="krgpendidikan1" class="fas fa-minus btn-danger p-2 d-none"></i>
                             </div>
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
-                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div>
-                        <div class="col-6 mt-3 mb-4">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
+                            <div class="col-6 mb-4">
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
                                         Kota, Negara )</i></label>
-                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-2 ">
-                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
-                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="col-6 mt-3">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">SMK</label>
-                                <input type="text" name="nama_instansi" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Mulai</label>
-                                <input type="date" name="mulai_belajar" class="form-control" id="exampleInputPassword1">
+                                    <input type="text" name="kota_instansi2" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-2 ">
+                                    <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                    <input type="date" name="selesai_belajar2" class="form-control" id="exampleInputPassword1">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6 mt-3">
-                            <div class="mb-2">
-                                <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
+                        <div class="row d-none pendidikan-2">
+                            <hr>
+                            <div class="col-6 mb-4">
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Nama Instansi</label>
+                                    <input type="text" name="nama_instansi3" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Mulai</label>
+                                    <input type="date" name="mulai_belajar3" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <i id="tbhpendidikan3" class="fas fa-minus btn-danger p-2 d-none"></i>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="mb-2">
+                                    <label for="exampleInputPassword1" class="form-label">Kota <i class="fw-light">( Tulis:
                                         Kota, Negara )</i></label>
-                                <input type="text" name="kota_instansi" class="form-control" id="exampleInputPassword1">
+                                    <input type="text" name="kota_instansi3" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-2 ">
+                                    <label for="exampleInputPassword1" class="form-label">Selesai</label>
+                                    <input type="date" name="selesai_belajar3" class="form-control" id="exampleInputPassword1">
+                                </div>
                             </div>
-                            <div class="mb-2 ">
-                                <label for="exampleInputPassword1" class="form-label">Selesai</label>
-                                <input type="date" name="selesai_belajar" class="form-control" id="exampleInputPassword1">
-                            </div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -389,7 +397,7 @@
         function nilai2(vol) {
             document.querySelector('#volume2').value = vol + '%';
         }
-        function nila3(vol) {
+        function nilai3(vol) {
             document.querySelector('#volume3').value = vol + '%';
         }
     </script>
@@ -562,8 +570,43 @@
                 $('input[name="mulai_kerja2"]').val('');
                 $('input[name="selesai_kerja2"]').val('');
             });
-
             // Akhir Kerja
+
+            // Riwayat Pendidikan
+            $('#tbhpendidikan1').click(function () {
+                $('.pendidikan-1').removeClass('d-none');
+                $('#tbhpendidikan2').removeClass('d-none');
+                $('#tbhpendidikan1').addClass('d-none');
+                $('#krgpendidikan1').removeClass('d-none');
+            });
+            $('#tbhpendidikan2').click(function () {
+                $('.pendidikan-2').removeClass('d-none');
+                $('#tbhpendidikan2').addClass('d-none');
+                $('#tbhpendidikan3').removeClass('d-none');
+                $('#krgpendidikan1').addClass('d-none');
+            });
+            $('#tbhpendidikan3').click(function () {
+                $('.pendidikan-2').addClass('d-none');
+                $('#tbhpendidikan2').removeClass('d-none');
+                $('#tbhpendidikan3').addClass('d-none');
+                $('#krgpendidikan1').removeClass('d-none');
+                // hapus value
+                $('input[name="nama_instansi3"]').val('');
+                $('input[name="kota_instansi3"]').val('');
+                $('input[name="mulai_belajar3"]').val('');
+                $('input[name="selesai_belajar3"]').val('');
+            });
+            $('#krgpendidikan1').click(function () {
+                $('.pendidikan-1').addClass('d-none');
+                $('#tbhpendidikan1').removeClass('d-none');
+                $('#krgpendidikan1').removeClass('d-none');
+                // hapus value
+                $('input[name="nama_instansi2"]').val('');
+                $('input[name="kota_instansi2"]').val('');
+                $('input[name="mulai_belajar2"]').val('');
+                $('input[name="selesai_belajar2"]').val('');
+            });
+            // Akhir Pendidikan
         })
     </script>
 

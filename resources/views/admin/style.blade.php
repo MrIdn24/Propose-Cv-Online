@@ -381,6 +381,7 @@ footer a {
     }
 }
 
+/* breadcrumb */
 .breadcrumb .bulet1 {
     background-color: #5A61D7;
     border-radius: 50%;
@@ -389,7 +390,7 @@ footer a {
 }
 
 .breadcrumb .bulet1 i {
-    padding: 15px 5px;
+    padding: 15px 6px;
 }
 
 .breadcrumb .bulet2 {
