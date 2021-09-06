@@ -240,7 +240,6 @@ class CreateController extends Controller
     {
         //
     }
-
     public function template_flat()
     {
         $data1 = Datadiri::all();

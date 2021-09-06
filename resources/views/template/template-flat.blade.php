@@ -415,6 +415,27 @@
                             <td >: </td>
                             <td>{{ date('Y', strtotime($dats->mulai_kerja)) . ' - ' . date('Y', strtotime($dats->selesai_kerja)) }}</td>
                         </tr>
+                        @if ($dats->perusahaan2 == Null)
+
+                        @else
+                            <tr>
+                                <th style="padding-right: 20px">{{ $dats->perusahaan2}}</th>
+                                <td > - {{ $dats->jabatan2}}</td>
+                                <td >: </td>
+                                <td>{{ date('Y', strtotime($dats->mulai_kerja2)) . ' - ' . date('Y', strtotime($dats->selesai_kerja2)) }}</td>
+                            </tr>
+                        @endif
+
+                        @if ($dats->perusahaan3 == Null)
+                            
+                        @else
+                            <tr>
+                                <th style="padding-right: 20px">{{ $dats->perusahaan3}}</th>
+                                <td > - {{ $dats->jabatan3}}</td>
+                                <td >: </td>
+                                <td>{{ date('Y', strtotime($dats->mulai_kerja3)) . ' - ' . date('Y', strtotime($dats->selesai_kerja3)) }}</td>
+                            </tr>
+                        @endif
                         {{-- <tr>
                             <th>Marketingasd</th>
                             <td> - CVPropose</td>
@@ -442,6 +463,25 @@
                             <td style="width: 70px;">: </td>
                             <td>{{ date('Y', strtotime($dats->mulai_belajar)) . ' - ' . date('Y', strtotime($dats->selesai_belajar)) }}</td>
                         </tr>
+
+                        @if ($dats->nama_instansi2 == Null)
+                            
+                        @else
+                            <tr>
+                                <th style="width: 420px;">{{ $dats->nama_instansi2 . ', ' . $dats->kota_instansi2 }}</th>
+                                <td style="width: 70px;">: </td>
+                                <td>{{ date('Y', strtotime($dats->mulai_belajar2)) . ' - ' . date('Y', strtotime($dats->selesai_belajar2)) }}</td>
+                            </tr>
+                        @endif
+                        @if ($dats->nama_instansi3 == Null)
+                            
+                        @else
+                            <tr>
+                                <th style="width: 420px;">{{ $dats->nama_instansi3 . ', ' . $dats->kota_instansi3 }}</th>
+                                <td style="width: 70px;">: </td>
+                                <td>{{ date('Y', strtotime($dats->mulai_belajar3)) . ' - ' . date('Y', strtotime($dats->selesai_belajar3)) }}</td>
+                            </tr>
+                        @endif
                     </table>
 
                 </div>
