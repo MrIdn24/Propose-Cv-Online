@@ -29,31 +29,41 @@
                 <!-- <h3 class="text-center mb-5">Flat Template</h3> -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card shadow" id="mtp1">
-                        <img src="{{ asset('/images/template/DSTC3.svg') }}" alt="" class="mb-4 mt-4">
+                        <img src="{{ asset('/images/template/DSTC3.svg') }}" alt="" class="mb-2 mt-4 d-none">
+                        <div class="gambar placeholder mb-2 mt-4 m-auto" style="width: 150px; height: 200px"></div>
+                        <span class="text-center fs-6 pb-2">Night Candy</span>
                         <button class="btn btn-pilih" onclick="pilih(1)">Pilih</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card shadow" id="mtp2">
-                        <img src="{{ asset('/images/template/DSTC2.png') }}" alt="" class="mb-4 mt-4">
+                        <img src="{{ asset('/images/template/DSTC2.png') }}" alt="" class="mb-2 mt-4 d-none">
+                        <div class="gambar placeholder mb-2 mt-4 m-auto" style="width: 150px; height: 200px"></div>
+                        <span class="text-center fs-6 pb-2">Blue Origin</span>
                         <button class="btn btn-pilih" onclick="pilih(2)">Pilih</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card shadow" id="mtp3">
-                        <img src="{{ asset('/images/template/DSTC1.svg') }}" alt="" class="mb-4 mt-4">
+                        <img src="{{ asset('/images/template/DSTC1.svg') }}" alt="" class="mb-2 mt-4 d-none">
+                        <div class="gambar placeholder mb-2 mt-4 m-auto" style="width: 150px; height: 200px"></div>
+                        <span class="text-center fs-6 pb-2">White Rice</span>
                         <button class="btn btn-pilih" onclick="pilih(3)">Pilih</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card shadow" id="mtp4">
-                        <img src="{{ asset('/images/template/DSTC4.svg') }}" alt="" class="mb-4 mt-4">
+                        <img src="{{ asset('/images/template/DSTC4.svg') }}" alt="" class="mb-2 mt-4 d-none">
+                        <div class="gambar placeholder mb-2 mt-4 m-auto" style="width: 150px; height: 200px"></div>
+                        <span class="text-center fs-6 pb-2">Tiger Brave</span>
                         <button class="btn btn-pilih" onclick="pilih(4)">Pilih</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="card shadow" id="mtp5">
-                        <img src="{{ asset('/images/template/DSTC5.svg') }}" alt="" class="mb-4 mt-4">
+                        <img src="{{ asset('/images/template/DSTC5.svg') }}" alt="" class="mb-2 mt-4 d-none">
+                        <div class="gambar placeholder mb-2 mt-4 m-auto" style="width: 150px; height: 200px"></div>
+                        <span class="text-center fs-6 pb-2">Cerulean</span>
                         <button class="btn btn-pilih" onclick="pilih(5)">Pilih</button>
                     </div>
                 </div>
@@ -134,5 +144,13 @@
             }
 
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.gambar').addClass('d-none');
+                $('img').removeClass('d-none');
+            }, 2000);
+        });
     </script>
 @endpush

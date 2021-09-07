@@ -27,9 +27,10 @@
                         @csrf
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Tentang Saya</h4>
                         <label for="exampleInputPassword1" class="form-label">Deskripsi Diri</label>
-                        <textarea class="form-control" name="deksripsi" id="" cols="30" rows="10"
-                            placeholder="max 300" maxlength="300"></textarea>
+                        <textarea class="form-control" name="deksripsi" id="deks" cols="30" rows="10"
+                            placeholder="Deksripsikan dirimu" maxlength="300"></textarea>
                 </div>
+                        <p class="mt-3" id="jk" style="opacity: 45%">Jumlah Karakter : <span id="outdeks">0</span>/300</p>
             </div>
             
             {{-- hobi --}}
@@ -37,7 +38,7 @@
                 <div class="container" id="dynamic_field">
                     <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Hobi</h4>
                     <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                        <strong>Tips! </strong>Maksimal hobi 4 untuk tampilan Cv lebih bagus
+                        <strong>Tips! </strong>Maksimal 4 hobi untuk tampilan Cv lebih bagus
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <div class="row">
@@ -80,11 +81,18 @@
             </div>
 
             {{-- Skill --}}
+            {{-- <div class="card shadow mb-4">
+                <div class="contain">
+                    <i class="fa fa-trash float-end fs-4"></i>
+                    <i class="fa fa-sort-down float-end fs-4"></i>
+                    <h4 class="border-bottom border-1 border-dark mb-2 mb-md-4">Skill</h4>
+                </div>
+            </div> --}}
             <div class="card shadow mb-4">
                 <div class="container">
                     <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Skill</h4>
                     <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                        <strong>Tips! </strong>Maksimal skill 3 untuk tampilan Cv lebih bagus
+                        <strong>Tips! </strong>Maksimal 3 skill untuk tampilan Cv lebih bagus
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <div class="row">
@@ -146,7 +154,7 @@
                 </div>
             </div>
             <!-- organisasi -->
-            <div class="card shadow mb-4">
+            {{-- <div class="card shadow mb-4">
                 <div class="container">
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Pengalaman Organisasi</h4>
                         <div class="row">
@@ -174,9 +182,9 @@
                             </div>
                         </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- prestasi -->
-            <div class="card shadow mb-4">
+            {{-- <div class="card shadow mb-4">
                 <div class="container">
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Prestasi</h4>
                         <div class="row">
@@ -194,7 +202,7 @@
                             </div>
                         </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- riwayat pendidikan -->
             <div class="card shadow mb-4 ">
@@ -607,6 +615,21 @@
                 $('input[name="selesai_belajar2"]').val('');
             });
             // Akhir Pendidikan
+
+            // Deksripsi
+
+            $('#deks').keyup(function () {
+                var out = $('#deks').val();
+                $('#outdeks').html('<span>'+out.length +'</span>');
+
+                if (out.length >= 300) {
+                    $('#jk').css({'opacity':'100%'});
+                }else{
+                    $('#jk').css({'opacity':'45%'});
+                }
+            });
+
+            // AKhir Deksripsi
         })
     </script>
 

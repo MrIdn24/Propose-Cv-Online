@@ -151,20 +151,8 @@ class CreateController extends Controller
         $dtUpload->hobi3 = $request->hobi3;
         $dtUpload->hobi4 = $request->hobi4;
         $dtUpload->save();
-        // $id = Datadiri::all();
-        // foreach ($id as $i) {
-        //     $dtUpload->id_datadiris = $i->id;
-        // }
 
-        // dd($request);
-        // Pengalaman::create([
-        //     'hobi2' => "$request->hobi2",
-        //     'hobi3' => "$request->hobi3",
-        //     'hobi4' => "$request->hobi4"
-        // ]);
-        // Pengalaman::create($request->all());
         return redirect()->route('chose-template');
-        // return redirect()->route('choose-tmp');
     }
 
     public function storetmp(Request $request)
@@ -263,7 +251,7 @@ class CreateController extends Controller
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
-        
+
         foreach ($data1 as $dat) {
         }
 
@@ -274,7 +262,7 @@ class CreateController extends Controller
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
-        
+
         foreach ($data1 as $dat) {
         }
 
@@ -285,7 +273,7 @@ class CreateController extends Controller
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
-       
+
         foreach ($data1 as $dat) {
         }
 

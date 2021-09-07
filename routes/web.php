@@ -45,5 +45,5 @@ Route::prefix('/')->group(function () {
     Route::get('/template-4', [CreateController::class, 'template_4'])->name('template-4');
     Route::get('/template-5', [CreateController::class, 'template_5'])->name('template-5');
     Route::get('/pdf', [CreateController::class, 'printPDF']);
-    Route::get('/chose-template', [HomeController::class, 'chose_template'])->name('chose-template');
+    Route::get('/choose-template', [HomeController::class, 'chose_template'])->name('chose-template');
 });

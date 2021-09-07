@@ -5,6 +5,8 @@
 @section('content')
     @foreach ($data1 as $dat)
     @endforeach
+    @foreach ($data2 as $dats)
+    @endforeach
     <section id="checkout">
         <div class="breadcrumb container w-75 justify-content-evenly">
             <div class="row">
@@ -60,8 +62,6 @@
             </div>
             <div class="jarak d-grid gap-2 d-md-flex justify-content-md-end">
                 <form action="{{ route('create.storecheck') }}" method="post">
-                    @foreach ($data2 as $dats)
-                    @endforeach
                     @csrf
                     <input type="text" name="nama_user" id="nama_user" class="d-none" value="{{ $dats->nama_depan ." ".$dats->nama_belakang }}">
                     <button type="submit" class="btn btn-create p-2 ps-4 pe-4 mt-5" id="print"><i class="fas fa-download" id="icon"></i> Download PDF</button>
