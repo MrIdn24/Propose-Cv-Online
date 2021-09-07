@@ -146,7 +146,7 @@
                 </div>
             </div>
             <!-- organisasi -->
-            {{-- <div class="card shadow mb-4">
+            <div class="card shadow mb-4">
                 <div class="container">
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Pengalaman Organisasi</h4>
                         <div class="row">
@@ -176,7 +176,7 @@
                 </div>
             </div>
             <!-- prestasi -->
-            {{-- <div class="card shadow mb-4">
+            <div class="card shadow mb-4">
                 <div class="container">
                         <h4 class="border-bottom border-1 border-dark pb-1  mb-2 mb-md-4">Prestasi</h4>
                         <div class="row">
@@ -189,12 +189,12 @@
                             <div class="col-6">
                                 <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">Bulan & Tahun</label>
-                                    <input type="date" name="bulantahun" class="form-control" id="exampleInputPassword1">
+                                    <input type="month" name="bulantahun" class="form-control" id="exampleInputPassword1">
                                 </div>
                             </div>
                         </div>
                 </div>
-            </div> --}}
+            </div>
 
             <!-- riwayat pendidikan -->
             <div class="card shadow mb-4 ">
