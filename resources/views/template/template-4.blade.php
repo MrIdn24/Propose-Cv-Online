@@ -385,7 +385,7 @@
                         <span class="isi">{{ $dat->email}}</span>
                         <hr>
                         <i class="fas fa-phone a"></i>
-                        <span class="isi">+62{{ $dat->no_telp}}</span>
+                        <span class="isi">+{{ $dat->no_telp}}</span>
                         <hr>
                         <i class="fas fa-map-marker-alt a"></i>
                         <span class="isi-1">{{ $dat->alamat}}</span>
@@ -405,6 +405,22 @@
                     <i class="fas fa-stop"></i>
                     <span><b> {{ date('Y', strtotime($dats->mulai_belajar)) . ' - ' . date('Y', strtotime($dats->selesai_belajar)) . ' | ' . $dats->nama_instansi . ' | ' . $dats->kota_instansi}}</b></span>
                 </div>
+                @if ($dats->nama_instansi2 == Null)
+                    
+                @else
+                    <div class="box1">
+                        <i class="fas fa-stop"></i>
+                        <span><b> {{ date('Y', strtotime($dats->mulai_belajar2)) . ' - ' . date('Y', strtotime($dats->selesai_belajar2)) . ' | ' . $dats->nama_instansi2 . ' | ' . $dats->kota_instansi2}}</b></span>
+                    </div>
+                @endif
+                @if ($dats->nama_instansi3 == Null)
+                    
+                @else
+                    <div class="box1">
+                        <i class="fas fa-stop"></i>
+                        <span><b> {{ date('Y', strtotime($dats->mulai_belajar3)) . ' - ' . date('Y', strtotime($dats->selesai_belajar3)) . ' | ' . $dats->nama_instansi3 . ' | ' . $dats->kota_instansi3}}</b></span>
+                    </div>
+                @endif
                 {{-- <div class="box1">
                     <i class="fas fa-stop"></i>
                     <span><b> 2010 - 2016 | SDN CISALAK 4 | Jl Raya Bogor</b></span>
@@ -419,6 +435,22 @@
                     <i class="fas fa-stop"></i>
                     <span><b> {{ date('Y', strtotime($dats->mulai_kerja)) . ' - ' . date('Y', strtotime($dats->selesai_kerja)) . ' | ' . $dats->jabatan . ' | ' . $dats->perusahaan}}</b></span>
                 </div>
+                @if ($dats->perusahaan2 == Null)
+                    
+                @else
+                    <div class="box1">
+                        <i class="fas fa-stop"></i>
+                        <span><b> {{ date('Y', strtotime($dats->mulai_kerja2)) . ' - ' . date('Y', strtotime($dats->selesai_kerja2)) . ' | ' . $dats->jabatan2 . ' | ' . $dats->perusahaan2}}</b></span>
+                    </div>
+                @endif
+                @if ($dats->perusahaan3 == Null)
+                    
+                @else
+                    <div class="box1">
+                        <i class="fas fa-stop"></i>
+                        <span><b> {{ date('Y', strtotime($dats->mulai_kerja3)) . ' - ' . date('Y', strtotime($dats->selesai_kerja3)) . ' | ' . $dats->jabatan3 . ' | ' . $dats->perusahaan3}}</b></span>
+                    </div>
+                @endif
                 {{-- <div class="box1">
                     <i class="fas fa-stop"></i>
                     <span><b> 2010 - 2016 | Depok</b></span>

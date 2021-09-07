@@ -324,6 +324,22 @@
                         <h4>{{ date('Y', strtotime($dats->mulai_belajar)) . ' - ' . date('Y', strtotime($dats->selesai_belajar)) }}</h4>
                         <p>{{ $dats->nama_instansi . ', ' . $dats->kota_instansi }}</p>
                     </div>
+                    @if ($dats->nama_instansi2 == Null)
+                        
+                    @else
+                        <div class="text">
+                            <h4>{{ date('Y', strtotime($dats->mulai_belajar2)) . ' - ' . date('Y', strtotime($dats->selesai_belajar2)) }}</h4>
+                            <p>{{ $dats->nama_instansi2 . ', ' . $dats->kota_instansi2 }}</p>
+                        </div>
+                    @endif
+                    @if ($dats->nama_instansi3 == Null)
+                        
+                    @else
+                        <div class="text">
+                            <h4>{{ date('Y', strtotime($dats->mulai_belajar3)) . ' - ' . date('Y', strtotime($dats->selesai_belajar3)) }}</h4>
+                            <p>{{ $dats->nama_instansi3 . ', ' . $dats->kota_instansi3 }}</p>
+                        </div>
+                    @endif
                     {{-- <div class="text">
                         <h4>2016 - 2020</h4>
                         <p>smk taruna bhakti, Depok</p>
@@ -377,6 +393,22 @@
                         <h4>{{ date('Y', strtotime($dats->mulai_kerja)) . ' - ' . date('Y', strtotime($dats->selesai_kerja)) }}</h4>
                         <p>{{ $dats->jabatan . ', ' . $dats->perusahaan }}</p>
                     </div>
+                    @if ($dats->perusahaan2 == Null)
+                        
+                    @else
+                        <div class="text">
+                            <h4>{{ date('Y', strtotime($dats->mulai_kerja2)) . ' - ' . date('Y', strtotime($dats->selesai_kerja2)) }}</h4>
+                            <p>{{ $dats->jabatan2 . ', ' . $dats->perusahaan2 }}</p>
+                        </div>
+                    @endif
+                    @if ($dats->perusahaan3 == Null)
+                        
+                    @else
+                        <div class="text">
+                            <h4>{{ date('Y', strtotime($dats->mulai_kerja3)) . ' - ' . date('Y', strtotime($dats->selesai_kerja3)) }}</h4>
+                            <p>{{ $dats->jabatan3 . ', ' . $dats->perusahaan3 }}</p>
+                        </div>
+                    @endif
                     {{-- <div class="text">
                         <h4>2019 - 2021</h4>
                         <p>Errai pasific</p>
@@ -403,7 +435,7 @@
                 <div class="kontak">
                     <h3>Kontak</h3>
                     <div class="garis"></div>
-                    <p>+ {{ $dat->no_telp}}</p>
+                    <p>+{{ $dat->no_telp}}</p>
                     <p>{{ $dat->email}}</p>
                 </div>
 

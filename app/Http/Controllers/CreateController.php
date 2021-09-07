@@ -263,6 +263,7 @@ class CreateController extends Controller
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
+        
         foreach ($data1 as $dat) {
         }
 
@@ -273,6 +274,7 @@ class CreateController extends Controller
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
+        
         foreach ($data1 as $dat) {
         }
 
@@ -283,6 +285,7 @@ class CreateController extends Controller
     {
         $data1 = Datadiri::all();
         $data2 = Pengalaman::all();
+       
         foreach ($data1 as $dat) {
         }
 

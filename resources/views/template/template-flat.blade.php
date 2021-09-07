@@ -315,7 +315,7 @@
                             </li>
                             <li>
                                 No Telp/Hp : <br>
-                                <span style="font-weight: normal;">+ {{ $dat->no_telp }}</span>
+                                <span style="font-weight: normal;">+{{ $dat->no_telp }}</span>
                             </li>
                             <li>
                                 Email : <br>

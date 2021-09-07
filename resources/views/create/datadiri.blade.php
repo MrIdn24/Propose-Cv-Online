@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">No Telp</label>
-                                    <input type="text" class="form-control  @error('no_telp') is-invalid @enderror" name="no_telp" id="exampleInputPassword1">
+                                    <input type="text" class="form-control  @error('no_telp') is-invalid @enderror" name="no_telp" id="exampleInputPassword1" placeholder="awali 62">
                                 </div>
                                 {{-- <div class="mb-2">
                                     <label for="exampleInputPassword1" class="form-label">Kota</label>

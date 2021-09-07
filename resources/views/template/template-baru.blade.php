@@ -238,7 +238,7 @@
                         class="text">{{ $dat->status_perkawinan }}</span>
                 </p>
                 <p style="padding-bottom: 10px;"><span class="bulet"></span> <span
-                        class="text">+ {{ $dat->no_telp }}</span> </p>
+                        class="text">+{{ $dat->no_telp }}</span> </p>
                 <p style="padding-bottom: 10px;"><span class="bulet"></span> <span
                         class="text">{{ $dat->email }}</span></p>
                 <p style="padding-bottom: 10px; text-transform: capitalize;"><span class="bulet"></span><span
@@ -320,6 +320,22 @@
                                 style="margin-right: 15px; "></i>{{ date('Y', strtotime($dats->mulai_belajar)) . ' - ' . date('Y', strtotime($dats->selesai_belajar)) }}
                             <span class="me-2">{{ $dats->nama_instansi . ', ' . $dats->kota_instansi }}</span>
                         </p>
+                        @if ($dats->nama_instansi2 == Null)
+                            
+                        @else
+                            <p><i class="fas fa-caret-right"
+                                style="margin-right: 15px; "></i>{{ date('Y', strtotime($dats->mulai_belajar2)) . ' - ' . date('Y', strtotime($dats->selesai_belajar2)) }}
+                                <span class="me-2">{{ $dats->nama_instansi2 . ', ' . $dats->kota_instansi2 }}</span>
+                            </p>
+                        @endif
+                        @if ($dats->nama_instansi3 == Null)
+                            
+                        @else
+                            <p><i class="fas fa-caret-right"
+                                style="margin-right: 15px; "></i>{{ date('Y', strtotime($dats->mulai_belajar3)) . ' - ' . date('Y', strtotime($dats->selesai_belajar3)) }}
+                                <span class="me-2">{{ $dats->nama_instansi3 . ', ' . $dats->kota_instansi3 }}</span>
+                            </p>
+                        @endif
                         {{-- <p><i class="fas fa-caret-right" style="margin-right: 15px;"></i>2017 - 2020 University Name</p>
                         <p><i class="fas fa-caret-right" style="margin-right: 15px;"></i>2017 - 2020 University Name</p> --}}
                     </div>
@@ -333,6 +349,22 @@
                                 style="margin-right: 15px; "></i>{{ date('Y', strtotime($dats->mulai_kerja)) . ' - ' . date('Y', strtotime($dats->selesai_kerja)) }}
                             <span class="me-2">{{ $dats->jabatan . ', ' . $dats->perusahaan }}</span>
                         </p>
+                        @if ($dats->perusahaan2 == Null)
+                            
+                        @else
+                            <p><i class="fas fa-caret-right"
+                                style="margin-right: 15px; "></i>{{ date('Y', strtotime($dats->mulai_kerja2)) . ' - ' . date('Y', strtotime($dats->selesai_kerja2)) }}
+                            <span class="me-2">{{ $dats->jabatan2 . ', ' . $dats->perusahaan2 }}</span>
+                        </p>
+                        @endif
+                        @if ($dats->perusahaan3 == Null)
+                            
+                        @else
+                            <p><i class="fas fa-caret-right"
+                                style="margin-right: 15px; "></i>{{ date('Y', strtotime($dats->mulai_kerja3)) . ' - ' . date('Y', strtotime($dats->selesai_kerja3)) }}
+                            <span class="me-2">{{ $dats->jabatan3 . ', ' . $dats->perusahaan3 }}</span>
+                        </p>
+                        @endif
                         {{-- <p><i class="fas fa-caret-right" style="margin-right: 15px;"></i>2017 - 2020 University Name</p>
                         <p><i class="fas fa-caret-right" style="margin-right: 15px;"></i>2017 - 2020 University Name</p> --}}
                     </div>

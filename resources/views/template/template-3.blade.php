@@ -369,7 +369,7 @@
                     Staus Perkawinan:<p>{{ $dat->status_perkawinan}}</p>
                 </div>
                 <div class="text">
-                    No telp:<p>+ {{ $dat->no_telp}}</p>
+                    No telp:<p>+{{ $dat->no_telp}}</p>
                 </div>
                 <div class="text" style="text-transform: none">
                     Email:<p>{{ $dat->email}}</p>
@@ -381,13 +381,42 @@
             <!-- Pendidikan -->
             <div class="pendidikan">
                 <h2>Riwayat Pendidikan</h2>
-                <p style="padding-bottom: 5px;">
-                    <span class="bulet"></span>
-                    <span class="text">{{ date('Y', strtotime($dats->mulai_belajar)) . ' - ' . date('Y', strtotime($dats->selesai_belajar)) }}
-                        <span style="margin-left: 10px;">{{ $dats->nama_instansi . ', ' . $dats->kota_instansi }}
+                <div>
+                    <p style="padding-bottom: 5px;">
+                        <span class="bulet"></span>
+                        <span class="text">{{ date('Y', strtotime($dats->mulai_belajar)) . ' - ' . date('Y', strtotime($dats->selesai_belajar)) }}
+                            <span style="margin-left: 10px;">{{ $dats->nama_instansi . ', ' . $dats->kota_instansi }}
+                            </span>
                         </span>
-                    </span>
-                </p>
+                    </p>
+                </div>
+
+                @if ($dats->nama_instansi2 == Null)
+                    
+                @else
+                    <div>
+                        <p style="padding-bottom: 5px;">
+                            <span class="bulet"></span>
+                            <span class="text">{{ date('Y', strtotime($dats->mulai_belajar2)) . ' - ' . date('Y', strtotime($dats->selesai_belajar2)) }}
+                                <span style="margin-left: 10px;">{{ $dats->nama_instansi2 . ', ' . $dats->kota_instansi2 }}
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                @endif
+                @if ($dats->nama_instansi3 == Null)
+                    
+                @else
+                    <div>
+                        <p style="padding-bottom: 5px;">
+                            <span class="bulet"></span>
+                            <span class="text">{{ date('Y', strtotime($dats->mulai_belajar3)) . ' - ' . date('Y', strtotime($dats->selesai_belajar3)) }}
+                                <span style="margin-left: 10px;">{{ $dats->nama_instansi3 . ', ' . $dats->kota_instansi3 }}
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                @endif
                 {{-- <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
                     <span class="text">2010 - 2016
@@ -400,13 +429,41 @@
             <!-- pekerjaan -->
             <div class="pekerjaan">
                 <h2>Riwayat Pekerjaan</h2>
-                <p style="padding-bottom: 5px;">
-                    <span class="bulet"></span>
-                    <span class="text">{{ date('Y', strtotime($dats->mulai_kerja)) . ' - ' . date('Y', strtotime($dats->selesai_kerja)) }}
-                        <span style="margin-left: 10px;">{{ $dats->jabatan . ', ' . $dats->perusahaan }}
+                <div>
+                    <p style="padding-bottom: 5px;">
+                        <span class="bulet"></span>
+                        <span class="text">{{ date('Y', strtotime($dats->mulai_kerja)) . ' - ' . date('Y', strtotime($dats->selesai_kerja)) }}
+                            <span style="margin-left: 10px;">{{ $dats->jabatan . ', ' . $dats->perusahaan }}
+                            </span>
                         </span>
-                    </span>
-                </p>
+                    </p>
+                </div>
+                @if ($dats->perusahaan2 == Null)
+                    
+                @else
+                    <div>
+                        <p style="padding-bottom: 5px;">
+                            <span class="bulet"></span>
+                            <span class="text">{{ date('Y', strtotime($dats->mulai_kerja2)) . ' - ' . date('Y', strtotime($dats->selesai_kerja2)) }}
+                                <span style="margin-left: 10px;">{{ $dats->jabatan2 . ', ' . $dats->perusahaan2 }}
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                @endif
+                @if ($dats->perusahaan3 == Null)
+                    
+                @else
+                    <div>
+                        <p style="padding-bottom: 5px;">
+                            <span class="bulet"></span>
+                            <span class="text">{{ date('Y', strtotime($dats->mulai_kerja3)) . ' - ' . date('Y', strtotime($dats->selesai_kerja3)) }}
+                                <span style="margin-left: 10px;">{{ $dats->jabatan3 . ', ' . $dats->perusahaan3 }}
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                @endif
                 {{-- <p style="padding-bottom: 5px;">
                     <span class="bulet"></span>
                     <span class="text">2010 - 2016
