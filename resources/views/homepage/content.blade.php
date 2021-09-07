@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class=" col-md-6 col-lg-4">
-                <div class="card text-center " data-aos="zoom-in" data-aos-duration="1000">
+                <div class="card text-center " data-aos="zoom-in">
                     <div class="container">
                         <img src="{{asset('images/fast-time.svg')}}" alt="" class="gambar1  mb-4">
                         <h3>Cepat & Praktis</h3>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class=" col-md-6 col-lg-4">
-                <div class="card text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                <div class="card text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
                     <div class="container">
                         <img src="{{asset('images/collage.svg')}}" alt="" class="gambar2 mb-4">
                         <h3>Banyak Pilihan Template</h3>
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class=" col-md-6 col-lg-4">
-                <div class="card text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                <div class="card text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
                     <div class="container">
                         <img src="{{asset('images/settings.svg')}}" alt="" class="gambar3  mb-4">
                         <h3>Customize</h3>
@@ -113,7 +113,7 @@
         </div>
         <div class="row justify-content-center">
             <div class=" col-md-6 col-lg-4">
-                <div class="card text-center" data-aos="fade-right" data-aos-duration="1000">
+                <div class="card text-center" data-aos="fade-right">
                     <div class="container">
                         <img src="{{asset('images/howto0.svg')}}" alt="" class="gambar1  mb-4">
                         <h3>Isi Data</h3>
@@ -123,7 +123,7 @@
                 </div>
             </div>
             <div class=" col-md-6 col-lg-4">
-                <div class="card text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="card text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                     <div class="container">
                         <img src="{{asset('images/howto1.svg')}}" alt="" class="gambar2 mb-4">
                         <h3>Pilih Design</h3>
@@ -133,7 +133,7 @@
                 </div>
             </div>
             <div class=" col-md-6 col-lg-4">
-                <div class="card text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                <div class="card text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
                     <div class="container">
                         <img src="{{asset('images/howto2.svg')}}" alt="" class="gambar3  mb-4">
                         <h3>Donwload CV</h3>
@@ -169,6 +169,11 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card bg-white">
                     <img src="{{asset('images/template/DSTC4.svg')}}" alt="" class="gambar1  mb-4">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-white">
+                    <img src="{{asset('images/template/DSTC5.svg')}}" alt="" class="gambar1  mb-4">
                 </div>
             </div>
 

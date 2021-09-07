@@ -126,6 +126,15 @@ header .images img {
     font-size: 16px;
 }
 
+/* desktop versi */
+@media (min-width: 992px) {
+
+    #about .card p {
+        color: #848484;
+        font-size: 18px;
+    }
+}
+
 /* #about .card:first-child:hover{
     background-color: #5A61D7;
 } */
@@ -134,10 +143,11 @@ header .images img {
 #aboutme {
     margin-top: 100px;
     background-color: #F9F9F9;
+    padding: 50px 0;
 }
 
 #aboutme .images {
-    max-width: 450px;
+    max-width: 250px;
 }
 
 #aboutme h1 {
@@ -159,6 +169,11 @@ header .images img {
 
 /* desktop versi */
 @media (min-width: 992px) {
+
+    #aboutme .images {
+        max-width: 350px;
+    }
+
     #aboutme h1 {
         font-size: 40px;
         font-weight: 500;
@@ -166,11 +181,11 @@ header .images img {
     }
 
     #aboutme h3 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     #aboutme p {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -218,7 +233,7 @@ header .images img {
 
 #howto .card p {
     color: #848484;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @media (min-width: 992px) {
@@ -231,6 +246,10 @@ header .images img {
         font-weight: 300;
         color: #ADADAD;
     }
+    #howto .card p {
+        color: #848484;
+        font-size: 18px;
+    }
 }
 
 /* template */
@@ -239,10 +258,15 @@ header .images img {
     /* margin-bottom: 100px; */
 }
 
-#template h1 {
+#template .text h1 {
     font-size: 25px;
 }
-
+#template .text p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #ADADAD;
+    /* margin-bottom: 50px; */
+}
 #template .card {
     margin-bottom: 30px;
     border: none;

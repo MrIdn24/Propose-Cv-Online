@@ -188,7 +188,6 @@ class CreateController extends Controller
         }
         return redirect()->route($dat->nama_template);
     }
-
     // public function totemplate()
     // {
     //     $data = Template::all();
