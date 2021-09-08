@@ -633,5 +633,38 @@ footer a {
     font-weight: 300;
     color: #414141;
 }
-
+input:active{
+    /* outline: none !important;
+    border: grey !important; */
+    border-color: grey;
+    outline-color: grey;
+    box-shadow: none !important;
+}
+input:focus{
+    /* outline: none !important;
+    border: grey !important; */
+    border-color: grey;
+    outline-color: grey;
+    box-shadow: none !important;
+}
+select:active{
+    /* outline: none !important;
+    border: grey !important; */
+    box-shadow: none !important;
+}
+select:focus{
+    /* outline: none !important;
+    border: grey !important; */
+    box-shadow: none !important;
+}
+textarea:active{
+    /* outline: none !important;
+    border: grey !important; */
+    box-shadow: none !important;
+}
+textarea:focus{
+    /* outline: none !important;
+    border: grey !important; */
+    box-shadow: none !important;
+}
 </style>
