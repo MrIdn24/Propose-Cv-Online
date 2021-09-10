@@ -44,7 +44,15 @@ class CreateController extends Controller
         $data2 = Datadiri::all();
         return view('create.checkout', compact('data1', 'data2'));
     }
+    public function chose_template()
+    {
+        return view('create.chose-template');
+    }
 
+    public function about()
+    {
+        return view('homepage.about');
+    }
     /**
      * Store a newly created resource in storage.
      *

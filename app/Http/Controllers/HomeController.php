@@ -3,34 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\Checkout;
+use App\Models\Template;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
-        $db = Checkout::all()->count('id');
-        return view('homepage.content', compact('db'));
-    }
-    public function about()
-    {
-        return view('homepage.about');
-        // return view('create.checkout');
-    }
-    public function datadiri()
-    {
-        return view('create.datadiri');
-    }
-    public function pengalaman()
-    {
-        return view('create.pengalaman');
-    }
-    public function checkout()
-    {
-        return view('create.chtemplate');
-    }
-    public function chose_template()
-    {
-        return view('create.chose-template');
+        $db1 = Checkout::all()->count('id');
+        $db2 = Template::select('nama_template');
+        return view('homepage.content', compact('db1','db2'));
     }
 }

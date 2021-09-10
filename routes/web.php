@@ -21,7 +21,7 @@ use App\Http\Controllers\HomeController;
 // });
 
 Route::get('/index', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/about', [CreateController::class, 'about'])->name('about');
 // Route::get('/template-flat', function () {
 //     return view('template.templateflat');
 // });
@@ -45,5 +45,9 @@ Route::prefix('/')->group(function () {
     Route::get('/template-4', [CreateController::class, 'template_4'])->name('template-4');
     Route::get('/template-5', [CreateController::class, 'template_5'])->name('template-5');
     Route::get('/pdf', [CreateController::class, 'printPDF']);
-    Route::get('/choose-template', [HomeController::class, 'chose_template'])->name('chose-template');
+    Route::get('/choose-template', [CreateController::class, 'chose_template'])->name('chose-template');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
