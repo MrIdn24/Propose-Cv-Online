@@ -159,19 +159,19 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card bg-white">
                     <img src="{{asset('images/template/DSTC1.svg')}}" alt="" class="gambar1  mb-4">
-                    <h5>{{ $db2->where('nama_template', 'template-3')->get()->count() }} Sudah Menggunakan</h5>
+                    <h5>{{ $tp1 }} Sudah Menggunakan</h5>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card bg-white">
                     <img src="{{asset('images/template/DSTC3.svg')}}" alt="" class="gambar1  mb-4">
-                    <h5>{{ $db2->where('nama_template', 'template-baru')->get()->count() }} Sudah Menggunakan</h5>
+                   <h5>{{ $tp2 }} Sudah Menggunakan</h5>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card bg-white">
                     <img src="{{asset('images/template/DSTC4.svg')}}" alt="" class="gambar1  mb-4">
-                    <h5>{{ $db2->where('nama_template', 'template-5')->get()->count() }} Sudah Menggunakan</h5>
+                    <h5>{{ $tp3 }} Sudah Menggunakan</h5>
                 </div>
             </div>
 

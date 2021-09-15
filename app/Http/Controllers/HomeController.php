@@ -26,7 +26,9 @@ class HomeController extends Controller
     public function index()
     {
         $db1 = Checkout::all()->count('id');
-        $db2 = Template::select('nama_template');
-        return view('homepage.content', compact('db1','db2'));
+        $tp1 = Template::where('nama_template','template-baru')->count();
+        $tp2 = Template::where('nama_template','template-baru')->count();
+        $tp3 = Template::where('nama_template','template-baru')->count();
+        return view('homepage.content', compact('db1','tp1','tp2', 'tp3'));
     }
 }
