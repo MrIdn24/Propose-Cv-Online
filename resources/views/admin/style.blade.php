@@ -667,4 +667,44 @@ textarea:focus{
     border: grey !important; */
     box-shadow: none !important;
 }
+
+#login {
+    margin-top: 200px;
+    
+}
+/* login */
+#login .card {
+    border: none;
+    border-radius: 10px;
+}
+
+#login .card .card-head {
+    padding: 13px 25px;
+    font-size: 12px;
+    color: #636363;
+    font-weight: 500;
+    background-color: #E8EAE6;
+}
+#login .card .card-form{
+    padding: 17px 25px;
+    font-size: 14px;
+    color: #636363;
+    font-weight: 500;
+}
+.btn-back{
+    background-color: #FF4646;
+    color: #ffffff;
+    font-size: 12px;
+}
+.btn-login {
+    background-color: #61B15A;
+    color: #ffffff;
+    font-size: 12px;
+}
+@media (min-width: 992px) {
+    #login .card {
+        width: 550px;
+        /* margin: auto; */
+    }
+}
 </style>
