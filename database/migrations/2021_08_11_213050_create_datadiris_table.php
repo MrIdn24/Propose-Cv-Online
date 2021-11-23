@@ -26,6 +26,8 @@ class CreateDatadirisTable extends Migration
             $table->string('email');
             $table->bigInteger('no_telp');
             $table->string('alamat');
+            // $table->unsignedBigInteger('id_user');
+            // $table->foreign('id_user')->references('id')->on('users');
             // $table->string('kota');
             // $table->string('negara');
             $table->timestamps();

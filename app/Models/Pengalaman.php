@@ -22,5 +22,7 @@ class Pengalaman extends Model
         'perusahaan',
         'mulai_kerja',
         'selesai_kerja',
+        'id_user',
     ];
+    
 }

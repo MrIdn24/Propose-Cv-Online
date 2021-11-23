@@ -16,6 +16,8 @@ class CreatePengalamenTable extends Migration
         Schema::create('pengalamans', function (Blueprint $table) {
             $table->id();
             // $table->bigInteger('id_datadiris');
+            // $table->unsignedBigInteger('id_user');
+            // $table->foreign('id_user')->references('id')->on('users');
             $table->text('deksripsi');
             $table->string('nama_instansi');
             $table->string('kota_instansi');

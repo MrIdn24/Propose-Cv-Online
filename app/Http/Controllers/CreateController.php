@@ -8,6 +8,7 @@ use App\Models\Pengalaman;
 use App\Models\Template;
 use Illuminate\Http\Request;
 use PDF;
+use SnappyImage;
 
 class CreateController extends Controller
 {
